@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 dprint:space-y-6  ">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
+      <section className="dprint:space-y-6 mx-auto w-full max-w-2xl space-y-8  ">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
@@ -38,8 +38,8 @@ export default function Page() {
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button
-                  className="size-8"
-                  variant="outline"
+                  className="size-8 border border-zinc-400"
+                  variant=""
                   size="icon"
                   asChild
                 >
@@ -49,12 +49,7 @@ export default function Page() {
                 </Button>
               ) : null}
               {RESUME_DATA.contact.tel ? (
-                <Button
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
+                <Button className="size-8" variant="social" size="icon" asChild>
                   <a href={`tel:${RESUME_DATA.contact.tel}`}>
                     <PhoneIcon className="size-4" />
                   </a>
@@ -64,7 +59,7 @@ export default function Page() {
                 <Button
                   key={social.name}
                   className="size-8"
-                  variant="outline"
+                  variant="social"
                   size="icon"
                   asChild
                 >
@@ -72,6 +67,34 @@ export default function Page() {
                     <social.icon className="size-4" />
                   </a>
                 </Button>
+              ))}
+              {RESUME_DATA.contact.social.map((data) => (
+                <div className="flex gap-2">
+                  <Button
+                    key={RESUME_DATA.contact.email}
+                    className="size-8"
+                    variant="social"
+                    size="icon"
+                    asChild
+                  >
+                    <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                      <span className="underline">
+                        {RESUME_DATA.contact.email}
+                      </span>
+                    </a>
+                  </Button>
+                  <Button
+                    key={RESUME_DATA.contact.tel}
+                    className="size-8"
+                    variant="social"
+                    size="icon"
+                    asChild
+                  >
+                    <a href={`https://wa.me/${RESUME_DATA.contact.tel}`}>
+                      <span className="sr-only">{RESUME_DATA.contact.tel}</span>
+                    </a>
+                  </Button>
+                </div>
               ))}
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
@@ -170,7 +193,7 @@ export default function Page() {
 
         <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+          <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
             {RESUME_DATA.projects.map((project) => {
               return (
                 <ProjectCard
@@ -186,10 +209,9 @@ export default function Page() {
           </div>
         </Section>
       </section>
-            <div className="fixed top-0 -right-6  ">
-      <ThemeToggle/>
-
-            </div>
+      <div className="fixed -right-6 top-0  ">
+        <ThemeToggle />
+      </div>
       <CommandMenu
         links={[
           {
