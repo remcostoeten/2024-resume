@@ -27,7 +27,7 @@ export const RESUME_DATA = {
   about:
     "Front-end engineer with a degree in graphic design. Aspiring to be more than a divjesschuiver.",
   summary:
-"Started off my journey in e-commerce building custom Magento 2 webshops. After that, I moved to SaaS, in-house for multinationals and currently employed in SaaS exclusively for non-profit and government organizations. My current go-to stack is NextJS(react), TypeScript, GraphQL/REST/own api paired with any styling solution wether it's tailwind, modules or styled components and if needed a (cloud/BaaS) database provider like Firebase, convex or sqlite. ",
+  "Started off my journey in e-commerce building custom Magento 2 webshops. After that, I moved to SaaS, in-house for multinationals and currently employed in SaaS exclusively for non-profit and government organizations. My current go-to stack is Next.js (React), TypeScript, GraphQL/REST/own API paired with any styling solution whether it's Tailwind, modules, or styled components, and if needed a (cloud/BaaS) database provider like Firebase, Convex, or SQLite.",
   avatarUrl: "https://media.licdn.com/dms/image/C5603AQFIlU2oV2JEgg/profile-displayphoto-shrink_800_800/0/1638502874619?e=1720051200&v=beta&t=WH6KGzVg415TN9BmBKooANDwtbdnBPU9UHKYBi-tjL0",
   personalWebsiteUrl: "https://remcostoeten.com",
   contact: {
