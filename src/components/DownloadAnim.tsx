@@ -1,7 +1,13 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const DownloadPDFText: React.FC = () => {
+  const [color, setColor] = useState("#fff");
+
+  useEffect(() => {
+    setColor(document.body.classList.contains("dark") ? "#fff" : "#000");
+  }, []);
+
   useEffect(() => {
     const fontSize =
       window.screen.width < 700 ? 32 : window.screen.width < 1200 ? 56 : 72;
@@ -24,10 +30,9 @@ const DownloadPDFText: React.FC = () => {
           ],
           {
             strokeWidth: 2,
-            color: document.body.classList.contains("dark") ? "#fff" : "#000",
+            color: color,
             fontSize: fontSize,
             textAlign: "center",
-            // }xtAlign: "center",
           },
         );
 
@@ -54,7 +59,7 @@ const DownloadPDFText: React.FC = () => {
     }, 6000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [color]);
 
   return <div id="container"></div>;
 };

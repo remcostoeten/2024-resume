@@ -2,40 +2,16 @@
 import { RESUME_DATA } from "@/data/resume-data";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { ProjectCard } from "./project-card";
-import { useState } from "react";
 
 export default function ProjectTabs() {
-  const [filter, setFilter] = useState("");
-
   const professionalProjects = RESUME_DATA.projects.filter(
-    (project) =>
-      project.work &&
-      ((project.title ?? "").toLowerCase().includes(filter.toLowerCase()) ||
-        (project.techStack &&
-          project.techStack.some((tech) =>
-            tech.toLowerCase().includes(filter.toLowerCase()),
-          ))),
+    (project) => project.work,
   );
 
-  const hobbyProjects = RESUME_DATA.projects.filter(
-    (project) =>
-      !project.work &&
-      ((project.title ?? "").toLowerCase().includes(filter.toLowerCase()) ||
-        (project.techStack &&
-          project.techStack.some((tech) =>
-            tech.toLowerCase().includes(filter.toLowerCase()),
-          ))),
-  );
+  const hobbyProjects = RESUME_DATA.projects.filter((project) => !project.work);
 
   return (
     <div>
-      <input
-        type="text"
-        value={filter}
-        onChange={(e) => setFilter(e.target.value)}
-        placeholder="Filter projects..."
-        className="mb-4"
-      />
       <Tabs defaultValue="hobby" className="w-full">
         <TabsList>
           <TabsTrigger value="professionally">Professionally</TabsTrigger>
