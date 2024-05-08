@@ -4,13 +4,14 @@ import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
 import { Metadata } from "next";
 import { Section } from "@/components/ui/section";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { GithubIcon, GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
-import { ProjectCard } from "@/components/project-card";
 import ThemeToggle from "@/components/ThemeToggle";
 import ProjectsTabsComponent from "@/components/project-tabs";
 import DownloadPDFText from "@/components/DownloadAnim";
+import Link from "next/link";
+import { LinkedInIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -37,11 +38,11 @@ export default function Page() {
                 {RESUME_DATA.location}
               </a>
             </p>
-            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+            <div className="flex gap-x-2 pt-1 font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button className="size-8" variant="social" size="icon" asChild>
                   <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                    <MailIcon className="size-4" />
+                    <MailIcon className="size-4 w-4" />
                   </a>
                 </Button>
               ) : null}
@@ -52,19 +53,19 @@ export default function Page() {
                   </a>
                 </Button>
               ) : null}
-              {RESUME_DATA.contact.social.map((social) => (
-                <Button
-                  key={social.name}
-                  className="size-8"
-                  variant="social"
-                  size="icon"
-                  asChild
+              <Button className="size-8" variant="social" size="icon" asChild>
+                <Link
+                  href="https://www.linkedin.com/in/remco-stoeten/"
+                  target="_blank"
                 >
-                  <a href={social.url}>
-                    <social.icon width={12} />
-                  </a>
-                </Button>
-              ))}
+                  <LinkedInIcon width={20} />
+                </Link>
+              </Button>
+              <Button className="size-8" variant="social" size="icon" asChild>
+                <Link href="https://github.com/remcostoeten" target="_blank">
+                  <GithubIcon width={20} />
+                </Link>
+              </Button>
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
               {RESUME_DATA.contact.email ? (
@@ -86,7 +87,6 @@ export default function Page() {
               ) : null}
             </div>
           </div>
-
           <Avatar className="size-28">
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
@@ -109,7 +109,6 @@ export default function Page() {
                       <a className="hover:underline" href={work.link}>
                         {work.company}
                       </a>
-
                       <span className="inline-flex gap-x-1">
                         {work.badges.map((badge) => (
                           <Badge
@@ -126,7 +125,6 @@ export default function Page() {
                       {work.start} - {work.end ?? "Present"}
                     </div>
                   </div>
-
                   <h4 className="font-mono text-sm leading-none">
                     {work.title}
                   </h4>
@@ -167,22 +165,9 @@ export default function Page() {
           </div>
         </Section>
         <Section className="print-force-new-page scroll-mb-16">
-          <ProjectsTabsComponent />
           <h2 className="text-xl font-bold">Projects</h2>
           <p>Excluding my professional work, solely hobby</p>{" "}
-          <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
-            {RESUME_DATA.projects.map((project, index) => {
-              return (
-                <ProjectCard
-                  key={index}
-                  title={project.title}
-                  description={project.description}
-                  tags={project.techStack}
-                  href={project.href}
-                />
-              );
-            })}
-          </div>
+          <ProjectsTabsComponent />
         </Section>
       </section>
       <div className="absolute right-0 top-0">
@@ -191,7 +176,6 @@ export default function Page() {
       <div className="fixed  bottom-24 right-12 z-50">
         <DownloadPDFText />
       </div>
-
       <div className="relative">
         <CommandMenu
           links={[

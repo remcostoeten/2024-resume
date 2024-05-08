@@ -43,7 +43,7 @@ export const CommandMenu = ({ links }: Props) => {
     <>
       <div className="relative">
         {delay && (
-          <div className="anim fixed pointer-events-none  bottom-8 right-8 -z-50">
+          <div className="anim pointer-events-none fixed  bottom-8 right-8 ">
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"

@@ -19,14 +19,15 @@ const DownloadPDFText: React.FC = () => {
               text: "Download PDF here",
               fromCurrentPosition: { y: 0 },
               duration: 3000,
-              fontSize: '16px',
+              fontSize: "16px",
             },
           ],
           {
             strokeWidth: 2,
-            color: "#030712",
+            color: document.body.classList.contains("dark") ? "#fff" : "#000",
             fontSize: fontSize,
             textAlign: "center",
+            // }xtAlign: "center",
           },
         );
 

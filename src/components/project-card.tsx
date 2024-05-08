@@ -4,11 +4,11 @@ import { Badge } from "./ui/badge";
 interface Props {
   title?: string;
   description?: string;
-  tags?: readonly string[];
+  skill?: readonly string[];
   href?: string;
 }
 
-export function ProjectCard({ title, description, tags, href }: Props) {
+export function ProjectCard({ title, description, skill, href }: Props) {
   return (
     <Card className="flex flex-col overflow-hidden border border-muted p-3">
       <CardHeader className="">
@@ -30,12 +30,8 @@ export function ProjectCard({ title, description, tags, href }: Props) {
       </CardHeader>
       <CardContent className="mt-auto flex">
         <div className="mt-2 flex flex-wrap gap-1">
-          {tags.map((tag) => (
-            <Badge
-              className="px-1 py-0 text-[10px]"
-              variant="secondary"
-              key={tag}
-            >
+          {skill?.map((tag) => (
+            <Badge className="px-1 py-0 text-[10px]" variant="secondary">
               {tag}
             </Badge>
           ))}
