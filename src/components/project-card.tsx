@@ -6,36 +6,30 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { Link2 } from "lucide-react";
 
 interface Props {
   title: string;
   description: string;
   tags: readonly string[];
-  link?: string;
+  href?: string;
 }
 
-export function ProjectCard({ title, description, tags, link }: Props) {
+export function ProjectCard({ title, description, tags, href }: Props) {
   return (
     <Card className="flex flex-col overflow-hidden border border-muted p-3">
       <CardHeader className="">
         <div className="space-y-1">
-          <CardTitle className="text-base">
-            {link ? (
-              <a
-                href={link}
-                target="_blank"
-                className="inline-flex items-center gap-1 hover:underline"
-              >
-                {title}{" "}
-                <span className="size-1 rounded-full bg-green-500"></span>
-              </a>
-            ) : (
-              title
-            )}
-          </CardTitle>
-          <div className="hidden font-mono text-xs underline print:visible">
-            {link?.replace("https://", "").replace("www.", "").replace("/", "")}
+          <div className=" font-mono text-xs underline print:visible">
+            <a
+              href={href}
+              target="_blank"
+              className="inline-flex items-center gap-1 hover:underline"
+            >
+              {title}
+            </a>
           </div>
+
           <CardDescription className="font-mono text-xs">
             {description}
           </CardDescription>

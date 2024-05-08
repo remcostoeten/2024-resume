@@ -1,23 +1,14 @@
-import {
-  AmbitLogo,
-  BarepapersLogo,
-  BimLogo,
-  CDGOLogo,
-  ClevertechLogo,
-  ConsultlyLogo,
-  EvercastLogo,
-  Howdy,
-  JarockiMeLogo,
-  JojoMobileLogo,
-  Minimal,
-  MobileVikingsLogo,
-  MonitoLogo,
-  NSNLogo,
-  ParabolLogo,
-  TastyCloudLogo,
-  YearProgressLogo,
-} from "@/images/logos";
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import { GitHubIcon, LinkedInIcon } from "@/components/icons";
+type TechStack =
+  | "Node"
+  | "JavaScript"
+  | "TypeScript"
+  | "Shadcn"
+  | "Tailwind"
+  | "NextJS"
+  | "Python"
+  | "Convex"
+  | "Firebase";
 
 export const RESUME_DATA = {
   name: "Remco Stoeten",
@@ -110,19 +101,116 @@ export const RESUME_DATA = {
   projects: [
     {
       title: "MineSweeper",
-      techStack: ["Typescript", "NextJS", "TailwindCSS"],
+      techStack: ["TypeScript", "NextJS", "Tailwind"] as TechStack[],
       description:
         "A replica of the online casino game Dare 2 Mine by Hacksaw Gaming. I implemented a currency system which syncs all the data (bet size, wins, losses, etc.)",
-      logo: "", // Add logo here
-      link: "", // Add source code link here
+      logo: "",
+      href: "https://github.com/remcostoeten/minesweeper",
     },
     {
       title: "Whatsapp Status Scraper",
       techStack: ["Typescript", "NextJS", "TailwindCSS", "Python", "Selenium"],
       description:
         "An automated scraper for WhatsApp statuses. No, I don't condone stalking, but I love exploring new technologies. I've built a Python Selenium Chromedriver WhatsApp status scraper but wanted more...",
-      logo: "", // Add logo here
-      link: "", // Add source code link here
+      logo: "",
+      href: "",
+    },
+    {
+      title: "snippets.remcostoeten.com",
+      techStack: ["NextJS", "TypeScript", "Markdown"],
+      description:
+        "This is an app containing various snippets, guides, and productivity scripts I use personally or for my job. The site is maintained via Markdown.mdx and powered by Nextra, which is a static site generator built with NextJS and TypeScript.",
+      href: "https://github.com/remcostoeten/snippets.remcostoeten",
+      tags: ["NextJS", "TypeScript"],
+    },
+    {
+      title: "UI portfolio",
+      techStack: ["NextJS", "Three.js", "TSX", "Framer motion"],
+      description: "Minimal cv ui design with threejs",
+      href: "https://github.com/remcostoeten/minimal-cv",
+      tag: "nextjs",
+    },
+    {
+      title: "Another cool UI design",
+      techStack: ["NextJS", "TSX", "Framer motion", "UI"],
+      description: "Another cool UI design I've built",
+      href: "https://github.com/remcostoeten/minimalistic-portfolio",
+      tag: "nextjs",
+    },
+    {
+      title: "GraphQL GitHub API portfolio",
+      techStack: ["NextJS", "TSX", "GraphQL"],
+      description: "...graphql github api portfolio",
+      href: "https://github.com/remcostoeten/remcostoeten-landing",
+      tag: "graphql",
+    },
+    {
+      title: "Visualize Component Debugger (npm package)",
+      techStack: ["React", "npm"],
+      description:
+        "Visualize react components to improve debugging and development experience.",
+      href: "https://github.com/remcostoeten/Visualize-react-components-debugger",
+      tag: "react",
+    },
+    {
+      title: "Personal Platform",
+      techStack: ["React"],
+      description: "just some nextjs practice ",
+      href: "https://github.com/remcostoeten/personal-platform/tree/master/app/dashboard",
+      tag: "react",
+    },
+    {
+      title: "URL Extractor",
+      techStack: ["NextJS", "TypeScript", "Regex"],
+      description:
+        "Just a tool I built because I got tired of other tools having slow Cloudflare protection. A working version is available at https://vsc.remcostoeten.com/url, but the UI is not up to par, hence I'm reworking it here.",
+      href: "https://github.com/remcostoeten/url-extractor",
+      label: "wip",
+    },
+    {
+      title: "WhatsApp Online Status Tracker",
+      techStack: ["Flask", "Python"],
+      description: "Track online status WhatsApp user in Flask.",
+      href: "https://github.com/remcostoeten/whatsapp-online-status-tracker",
+      tag: "python",
+    },
+    {
+      title: "SVG to React Component Generator Scripts",
+      techStack: ["JavaScript"],
+      description:
+        "A utility script to convert SVG files into React components. It reads SVGs from a directory, extracts content and attributes, and generates corresponding React components. Handles SVGs without specified dimensions by defaulting to 24x24. Components are named based on the SVG title or given a generic name.",
+      href: "https://github.com/remcostoeten/svg-to-react-component-tag-generator",
+      tag: "js",
+    },
+    {
+      title: "shadcn-ui-lazymans-auto-importer",
+      techStack: ["JavaScript"],
+      description:
+        "Download shaddcn/ui components with ease and generate a ui-imports.ts file, which auto-imports and exports the downloaded components, allowing for only one import per component instead of dozens of separate shaddcn imports.",
+      href: "https://github.com/remcostoeten/shadcn-ui-lazymans-auto-importer",
+    },
+    {
+      title: "HTML to JSX Converter",
+      techStack: ["NextJS", "TailwindCSS", "TypeScript", "Shadcn/ui", "Regex"],
+      description: "",
+      href: "https://github.com/remcostoeten/Html-To-React-JSX-TSX",
+      tag: "nextjs",
+    },
+    {
+      title: "Visual Studio Code Landing in React",
+      techStack: [
+        "NextJS",
+        "TailwindCSS",
+        "Shadcn/ui",
+        "Radix-ui",
+        "Clerk",
+        "Firebase",
+        "Planetscale",
+        "Prisma",
+      ],
+      description:
+        "A portfolio site in the style of an IDE, in this case Visual Studio Code. Built with NextJS, TailwindCSS, Shadcn/ui, radix-ui, Clerk authentication, Firebase database for old features and new features are built on Planetscale which is MySQL and Prisma as ORM.",
+      href: "vsc.remcostoeten.com",
     },
   ],
 } as const;
