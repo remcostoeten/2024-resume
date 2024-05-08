@@ -93,7 +93,7 @@ export const RESUME_DATA = {
     "jQeury",
     "HTML",
     "CSS/SSS",
-    
+
 "REST",
     "Adobe Creative Suite",
     "Figma",
@@ -112,9 +112,9 @@ export const RESUME_DATA = {
       title: "Whatsapp Status Scraper",
       techStack: ["TypeScript", "NextJS", "TailwindCSS", "Chromedriver", "Selenium"],
       description:
-        "An automated scraper for WhatsApp statuses. No, I don't condone stalking, but I love exploring new technologies. I've built a Python Selenium Chromedriver WhatsApp status scraper but wanted more UI so I built a entire real tike table with all scraped metrics",
+        "An automated scraper for WhatsApp statuses via NextJS api routes. No, I don't condone stalking, but I love exploring new technologies. I've built a Python Selenium Chromedriver WhatsApp status scraper but wanted more UI so I built a entire real tike table with all scraped metrics",
 logo: "",
-      href: "",
+      href: "https://github.com/remcostoeten/personal-platform/blob/master/pages/api/status/index.ts",
     },
     {
       title: "snippets.remcostoeten.com",
@@ -134,29 +134,28 @@ logo: "",
     {
       title: "Another cool UI design",
       techStack: ["NextJS", "TypeScript", "Framer Motion", "UI"],
-      description: "Another cool UI design I've built",
+      description: "Another cool UI design I've built. Itteration number thousand.",
       href: "https://github.com/remcostoeten/minimalistic-portfolio",
       tag: "nextjs",
     },
     {
       title: "GraphQL GitHub API portfolio",
       techStack: ["NextJS", "TypeScript", "Apollo","Framer motion", "GraphQL"],
-      description: "...graphql github api portfolio",
+      description: "...graphql github api portfolio, sleak design.",
       href: "https://github.com/remcostoeten/remcostoeten-landing",
-      tag: "graphql",
     },
     {
-      title: "Visualize Component Debugger (npm package)",
-      techStack: ["React", "npm"],
+      title: "Visualize Component Debugger (NPM package)",
+      techStack: ["React", "NPM"],
       description:
-        "Visualize react components to improve debugging and development experience.",
+        "A npm package that helps you visualize react components to improve debugging and development experience.",
       href: "https://github.com/remcostoeten/Visualize-react-components-debugger",
       tag: "react",
     },
     {
       title: "Personal Platform",
-      techStack: ["React"],
-      description: "just some nextjs practice ",
+      techStack: ["NextJS", "TypeScript", "API routes", "Tailwind", "Framer Motion", "GraphQL"],
+      description: "A personal intraneti'm bulding for all kind of purposes. Finance, storage, calendar. New repo is private  ",
       href: "https://github.com/remcostoeten/personal-platform/tree/master/app/dashboard",
       tag: "react",
     },
@@ -166,36 +165,33 @@ logo: "",
       description:
         "Just a tool I built because I got tired of other tools having slow Cloudflare protection. A working version is available at https://vsc.remcostoeten.com/url, but the UI is not up to par, hence I'm reworking it here.",
       href: "https://github.com/remcostoeten/url-extractor",
-      label: "wip",
     },
     {
       title: "WhatsApp Online Status Tracker",
-      techStack: ["Flask", "Python"],
-      description: "Track online status WhatsApp user in Flask.",
+techStack: ["Flask", "Python", "Selenium", "Chromedriver"],      description: "A tool that launches a chromedriver instance and scrapes the online status of a given WhatsApp user. Not because I condone stalking, but seemed like a cool project to learn scraping.",
       href: "https://github.com/remcostoeten/whatsapp-online-status-tracker",
       tag: "python",
     },
     {
       title: "SVG to React Component Generator Scripts",
-      techStack: ["JavaScript"],
+      techStack: ["JavaScript", "script"],
       description:
         "A utility script to convert SVG files into React components. It reads SVGs from a directory, extracts content and attributes, and generates corresponding React components. Handles SVGs without specified dimensions by defaulting to 24x24. Components are named based on the SVG title or given a generic name.",
       href: "https://github.com/remcostoeten/svg-to-react-component-tag-generator",
-      tag: "js",
     },
     {
       title: "shadcn-ui-lazymans-auto-importer",
       techStack: ["JavaScript"],
       description:
-        "Download shaddcn/ui components with ease and generate a ui-imports.ts file, which auto-imports and exports the downloaded components, allowing for only one import per component instead of dozens of separate shaddcn imports.",
+        "a scrirpt I build to cleanup ShadN/ui imports because in big projects it can get a mess. And maybe because I kept forgetting the standalone download command for components.",
       href: "https://github.com/remcostoeten/shadcn-ui-lazymans-auto-importer",
     },
     {
-      title: "HTML to JSX Converter",
-      techStack: ["NextJS", "TailwindCSS", "TypeScript", "Shadcn/ui", "Regex"],
-      description: "",
-      href: "https://github.com/remcostoeten/Html-To-React-JSX-TSX",
-      tag: "nextjs",
+      title: "HTML to React(JSX/TSX)) Converter",
+      description: "I used to convert quite some codepens to react and got tired of online tools their cloudflare protection so I build my own converter. It converts HTML too JSX or TSX including easy creation of functional components with props and types. Not perfect, but does the job. ",
+      href: "https://portfolio.remcostoeten.com/html-to-jsx",
+      techStack: ["NextJS", 'TypeScript', "Regex", "Headaches"],
+
     },
     {
       title: "Visual Studio Code Landing in React",
