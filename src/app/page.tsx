@@ -165,15 +165,15 @@ export default function Page() {
           </div>
         </Section>
         <Section className="print-force-new-page scroll-mb-16">
-          <h2 className="text-xl font-bold">Projects</h2>
-          <p>Excluding my professional work, solely hobby</p>{" "}
+        <h2 className="text-xl font-bold">Projects</h2>
+<p>Switch between my hobby projects and projects I've made or contributed to at work. There are a lot of private/client projects which I can't share for obvious reasons.</p>{" "}
           <ProjectsTabsComponent />
         </Section>
       </section>
-      <div className="absolute right-0 top-0">
+      <div className="no-print absolute right-0 top-0">
         <ThemeToggle />
       </div>
-      <div className="fixed  bottom-24 right-12 z-50">
+      <div className="fixed no-print  bottom-24 right-12 z-50">
         <DownloadPDFText />
       </div>
       <div className="relative">
