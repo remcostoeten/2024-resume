@@ -93,7 +93,8 @@ export const RESUME_DATA = {
     "jQeury",
     "HTML",
     "CSS/SSS",
-    "Magento 2",
+    
+"REST",
     "Adobe Creative Suite",
     "Figma",
     "BaaS services (Firebase, Convex, etc.)",
@@ -101,7 +102,7 @@ export const RESUME_DATA = {
   projects: [
     {
       title: "MineSweeper",
-      techStack: ["TypeScript", "NextJS", "Tailwind"] as TechStack[],
+      techStack: ["TypeScript", "NextJS", "BaaS", "Convex","Tailwind"] as TechStack[],
       description:
         "A replica of the online casino game Dare 2 Mine by Hacksaw Gaming. I implemented a currency system which syncs all the data (bet size, wins, losses, etc.)",
       logo: "",
@@ -109,15 +110,15 @@ export const RESUME_DATA = {
     },
     {
       title: "Whatsapp Status Scraper",
-      techStack: ["Typescript", "NextJS", "TailwindCSS", "Python", "Selenium"],
+      techStack: ["TypeScript", "NextJS", "TailwindCSS", "Chromedriver", "Selenium"],
       description:
-        "An automated scraper for WhatsApp statuses. No, I don't condone stalking, but I love exploring new technologies. I've built a Python Selenium Chromedriver WhatsApp status scraper but wanted more...",
-      logo: "",
+        "An automated scraper for WhatsApp statuses. No, I don't condone stalking, but I love exploring new technologies. I've built a Python Selenium Chromedriver WhatsApp status scraper but wanted more UI so I built a entire real tike table with all scraped metrics",
+logo: "",
       href: "",
     },
     {
       title: "snippets.remcostoeten.com",
-      techStack: ["NextJS", "TypeScript", "Markdown"],
+      techStack: ["NextJS", "TypeScript", "Blog","Markdown"],
       description:
         "This is an app containing various snippets, guides, and productivity scripts I use personally or for my job. The site is maintained via Markdown.mdx and powered by Nextra, which is a static site generator built with NextJS and TypeScript.",
       href: "https://github.com/remcostoeten/snippets.remcostoeten",
@@ -125,21 +126,21 @@ export const RESUME_DATA = {
     },
     {
       title: "UI portfolio",
-      techStack: ["NextJS", "Three.js", "TSX", "Framer motion"],
+      techStack: ["NextJS", "Three.js","TypeScript", "Framer Motion"],
       description: "Minimal cv ui design with threejs",
       href: "https://github.com/remcostoeten/minimal-cv",
       tag: "nextjs",
     },
     {
       title: "Another cool UI design",
-      techStack: ["NextJS", "TSX", "Framer motion", "UI"],
+      techStack: ["NextJS", "TypeScript", "Framer Motion", "UI"],
       description: "Another cool UI design I've built",
       href: "https://github.com/remcostoeten/minimalistic-portfolio",
       tag: "nextjs",
     },
     {
       title: "GraphQL GitHub API portfolio",
-      techStack: ["NextJS", "TSX", "GraphQL"],
+      techStack: ["NextJS", "TypeScript", "Apollo","Framer motion", "GraphQL"],
       description: "...graphql github api portfolio",
       href: "https://github.com/remcostoeten/remcostoeten-landing",
       tag: "graphql",
