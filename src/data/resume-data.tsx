@@ -1,4 +1,5 @@
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
+
 type TechStack =
   | "Node"
   | "JavaScript"
@@ -9,6 +10,20 @@ type TechStack =
   | "Python"
   | "Convex"
   | "Firebase";
+
+type IconProps = {
+  size?: number;
+  color?: string;
+};
+
+type Project = {
+  title?: string;
+  techStack?: TechStack[];
+  description?: string;
+  logo?: string;
+  href?: string;
+  work?: boolean;
+};
 
 export const RESUME_DATA = {
   name: "Remco Stoeten",
@@ -102,13 +117,7 @@ export const RESUME_DATA = {
   projects: [
     {
       title: "MineSweeper",
-      techStack: [
-        "TypeScript",
-        "NextJS",
-        "BaaS",
-        "Convex",
-        "Tailwind",
-      ] as TechStack[],
+      techStack: ["TypeScript", "NextJS", "BaaS", "Convex", "Tailwind"],
       description:
         "A replica of the online casino game Dare 2 Mine by Hacksaw Gaming. I implemented a currency system which syncs all the data (bet size, wins, losses, etc.)",
       logo: "",
@@ -232,5 +241,84 @@ export const RESUME_DATA = {
         "A portfolio site in the style of an IDE, in this case Visual Studio Code. Built with NextJS, TailwindCSS, Shadcn/ui, radix-ui, Clerk authentication, Firebase database for old features and new features are built on Planetscale which is MySQL and Prisma as ORM.",
       href: "vsc.remcostoeten.com",
     },
+    {
+      title: "Pleio platform",
+      techStack: ["React", "Styled-Components", "GraphQL"],
+      work: true,
+      description:
+        "A SaaS, intranet builder for non profit and goverment only.  ",
+      href: "https://gitlab.com/pleio/frontend",
+    },
+    {
+      title: "FSV Portaal",
+      techStack: ["Django", 'wcag', "JavaScript", "SCSS"],
+      work: true,
+      description: "Django backend with vanilla JavaScript + SCSS frontend.",
+      href: "https://fsv.nl",
+    },
+    {
+      title: "PDF Checker",
+      techStack: ["Vue2",'wcag'],
+      work: true,
+      description: "Check accessibility of PDF's in Vue(2).",
+      href: "https://gitlab.com/pleio/pdfchecker",
+    },
+    {
+      title: "Vedder & Vedder",
+      techStack: ["Magento 2", 'PHP, "scss", "jquery',"XML",'KnockoutJS'],
+      work: true,
+      description: "B2C webshop for jewelry.",
+      href: "https://veddervedder.nl",
+    },
+    {
+      title: "Alcomex",
+      techStack: ["Magento 2", 'PHP, "scss", "jquery',"XML",'KnockoutJS'],
+      work: true,
+      description: "B2B webshop for technical parts.",
+      href: "https://webshop.alcomex.nl",
+    },
+    {
+      title: "Quality Horse Products",
+      techStack: ["Magento 2", 'PHP, "scss", "jquery',"XML",'KnockoutJS'],
+      work: true,
+      description: "B2B webshop for horse products.",
+      href: "https://qhp.nl",
+    },
   ],
-} as const;
+} as {
+  name: string;
+  initials: string;
+  location: string;
+  locationLink: string;
+  about: string;
+  summary: string;
+  avatarUrl: string;
+  personalWebsiteUrl: string;
+  contact: {
+    email: string;
+    tel: string;
+    social: {
+      name: string;
+      url: string;
+      icon: React.FC<IconProps>;
+    }[];
+  };
+  education: {
+    school: string;
+    degree: string;
+    start: string;
+    end: string;
+  }[];
+  work: {
+    company: string;
+    link: string;
+    badges: string[];
+    title: string;
+    logo: string;
+    start: string;
+    end: string;
+    description: string;
+  }[];
+  skills: string[];
+  projects: Project[];
+};

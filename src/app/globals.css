@@ -79,6 +79,15 @@
   page-break-before: always;
 }
 
+body:not(.dark) .tabs.bg-muted {
+  background-color: #b9b9b7;
+  border: 1px solid;
+}
+
+.dark .tabs.bg-muted {
+  background-color: hsl(var(--muted)) !important;
+}
+
 .credit {
   display: flex;
   justify-content: center;

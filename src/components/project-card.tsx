@@ -1,17 +1,10 @@
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardDescription,
-  CardTitle,
-} from "./ui/card";
+import { Card, CardHeader, CardContent, CardDescription } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { Link2 } from "lucide-react";
 
 interface Props {
-  title: string;
-  description: string;
-  tags: readonly string[];
+  title?: string;
+  description?: string;
+  tags?: readonly string[];
   href?: string;
 }
 

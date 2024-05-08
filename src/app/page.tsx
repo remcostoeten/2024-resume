@@ -9,7 +9,8 @@ import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import ThemeToggle from "@/components/ThemeToggle";
-
+import ProjectsTabsComponent from "@/components/project-tabs";
+2;
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
   description: RESUME_DATA.summary,
@@ -164,7 +165,7 @@ export default function Page() {
             })}
           </div>
         </Section>
-
+        <ProjectsTabsComponent />
         <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
           <p>Excluding my professional work, solely hobby</p>{" "}
