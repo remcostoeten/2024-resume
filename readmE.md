@@ -17,8 +17,8 @@ This project is a comprehensive resume showcasing Remco Stoeten's skills and exp
 ## How to Run
 
 1. Clone the repository.
-2. Install the dependencies with `npm install`.
-3. Run the development server with `npm run dev`.
+2. Install the dependencies with `pnpm i`.
+3. Run the development server with `npm dev`.
 
 ## Projects
 
