@@ -94,7 +94,7 @@ export const RESUME_DATA = {
     "HTML",
     "CSS/SSS",
 
-"REST",
+    "REST",
     "Adobe Creative Suite",
     "Figma",
     "BaaS services (Firebase, Convex, etc.)",
@@ -102,7 +102,13 @@ export const RESUME_DATA = {
   projects: [
     {
       title: "MineSweeper",
-      techStack: ["TypeScript", "NextJS", "BaaS", "Convex","Tailwind"] as TechStack[],
+      techStack: [
+        "TypeScript",
+        "NextJS",
+        "BaaS",
+        "Convex",
+        "Tailwind",
+      ] as TechStack[],
       description:
         "A replica of the online casino game Dare 2 Mine by Hacksaw Gaming. I implemented a currency system which syncs all the data (bet size, wins, losses, etc.)",
       logo: "",
@@ -110,15 +116,21 @@ export const RESUME_DATA = {
     },
     {
       title: "Whatsapp Status Scraper",
-      techStack: ["TypeScript", "NextJS", "TailwindCSS", "Chromedriver", "Selenium"],
+      techStack: [
+        "TypeScript",
+        "NextJS",
+        "TailwindCSS",
+        "Chromedriver",
+        "Selenium",
+      ],
       description:
         "An automated scraper for WhatsApp statuses via NextJS api routes. No, I don't condone stalking, but I love exploring new technologies. I've built a Python Selenium Chromedriver WhatsApp status scraper but wanted more UI so I built a entire real tike table with all scraped metrics",
-logo: "",
+      logo: "",
       href: "https://github.com/remcostoeten/personal-platform/blob/master/pages/api/status/index.ts",
     },
     {
       title: "snippets.remcostoeten.com",
-      techStack: ["NextJS", "TypeScript", "Blog","Markdown"],
+      techStack: ["NextJS", "TypeScript", "Blog", "Markdown"],
       description:
         "This is an app containing various snippets, guides, and productivity scripts I use personally or for my job. The site is maintained via Markdown.mdx and powered by Nextra, which is a static site generator built with NextJS and TypeScript.",
       href: "https://github.com/remcostoeten/snippets.remcostoeten",
@@ -126,7 +138,7 @@ logo: "",
     },
     {
       title: "UI portfolio",
-      techStack: ["NextJS", "Three.js","TypeScript", "Framer Motion"],
+      techStack: ["NextJS", "Three.js", "TypeScript", "Framer Motion"],
       description: "Minimal cv ui design with threejs",
       href: "https://github.com/remcostoeten/minimal-cv",
       tag: "nextjs",
@@ -134,13 +146,14 @@ logo: "",
     {
       title: "Another cool UI design",
       techStack: ["NextJS", "TypeScript", "Framer Motion", "UI"],
-      description: "Another cool UI design I've built. Itteration number thousand.",
+      description:
+        "Another cool UI design I've built. Itteration number thousand.",
       href: "https://github.com/remcostoeten/minimalistic-portfolio",
       tag: "nextjs",
     },
     {
       title: "GraphQL GitHub API portfolio",
-      techStack: ["NextJS", "TypeScript", "Apollo","Framer motion", "GraphQL"],
+      techStack: ["NextJS", "TypeScript", "Apollo", "Framer motion", "GraphQL"],
       description: "...graphql github api portfolio, sleak design.",
       href: "https://github.com/remcostoeten/remcostoeten-landing",
     },
@@ -154,8 +167,16 @@ logo: "",
     },
     {
       title: "Personal Platform",
-      techStack: ["NextJS", "TypeScript", "API routes", "Tailwind", "Framer Motion", "GraphQL"],
-      description: "A personal intraneti'm bulding for all kind of purposes. Finance, storage, calendar. New repo is private  ",
+      techStack: [
+        "NextJS",
+        "TypeScript",
+        "API routes",
+        "Tailwind",
+        "Framer Motion",
+        "GraphQL",
+      ],
+      description:
+        "A personal intraneti'm bulding for all kind of purposes. Finance, storage, calendar. New repo is private  ",
       href: "https://github.com/remcostoeten/personal-platform/tree/master/app/dashboard",
       tag: "react",
     },
@@ -168,7 +189,9 @@ logo: "",
     },
     {
       title: "WhatsApp Online Status Tracker",
-techStack: ["Flask", "Python", "Selenium", "Chromedriver"],      description: "A tool that launches a chromedriver instance and scrapes the online status of a given WhatsApp user. Not because I condone stalking, but seemed like a cool project to learn scraping.",
+      techStack: ["Flask", "Python", "Selenium", "Chromedriver"],
+      description:
+        "A tool that launches a chromedriver instance and scrapes the online status of a given WhatsApp user. Not because I condone stalking, but seemed like a cool project to learn scraping.",
       href: "https://github.com/remcostoeten/whatsapp-online-status-tracker",
       tag: "python",
     },
@@ -188,10 +211,10 @@ techStack: ["Flask", "Python", "Selenium", "Chromedriver"],      description: "A
     },
     {
       title: "HTML to React(JSX/TSX)) Converter",
-      description: "I used to convert quite some codepens to react and got tired of online tools their cloudflare protection so I build my own converter. It converts HTML too JSX or TSX including easy creation of functional components with props and types. Not perfect, but does the job. ",
+      description:
+        "I used to convert quite some codepens to react and got tired of online tools their cloudflare protection so I build my own converter. It converts HTML too JSX or TSX including easy creation of functional components with props and types. Not perfect, but does the job. ",
       href: "https://portfolio.remcostoeten.com/html-to-jsx",
-      techStack: ["NextJS", 'TypeScript', "Regex", "Headaches"],
-
+      techStack: ["NextJS", "TypeScript", "Regex", "Headaches"],
     },
     {
       title: "Visual Studio Code Landing in React",
