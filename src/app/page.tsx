@@ -10,7 +10,8 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import ThemeToggle from "@/components/ThemeToggle";
 import ProjectsTabsComponent from "@/components/project-tabs";
-2;
+import DownloadPDFText from "@/components/DownloadAnim";
+
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
   description: RESUME_DATA.summary,
@@ -60,7 +61,7 @@ export default function Page() {
                   asChild
                 >
                   <a href={social.url}>
-                    <social.icon className="size-4" />
+                    <social.icon width={12} />
                   </a>
                 </Button>
               ))}
@@ -165,40 +166,50 @@ export default function Page() {
             })}
           </div>
         </Section>
-        <ProjectsTabsComponent />
         <Section className="print-force-new-page scroll-mb-16">
+          <ProjectsTabsComponent />
           <h2 className="text-xl font-bold">Projects</h2>
           <p>Excluding my professional work, solely hobby</p>{" "}
           <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
             {RESUME_DATA.projects.map((project, index) => {
               return (
                 <ProjectCard
-                  key={index} // Add this line
+                  key={index}
                   title={project.title}
                   description={project.description}
                   tags={project.techStack}
-                  href={project.href} // make sure project.hef contains the correct URL
+                  href={project.href}
                 />
               );
             })}
           </div>
         </Section>
       </section>
-      <div className="fixed -right-6 top-0  ">
+      <div className="absolute right-0 top-0">
         <ThemeToggle />
       </div>
-      <CommandMenu
-        links={[
-          {
-            url: RESUME_DATA.personalWebsiteUrl,
-            title: "Personal Website",
-          },
-          ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
-            url: socialMediaLink.url,
-            title: socialMediaLink.name,
-          })),
-        ]}
-      />
+      <div className="fixed  bottom-24 right-12 z-50">
+        <DownloadPDFText />
+      </div>
+
+      <div className="relative">
+        <CommandMenu
+          links={[
+            {
+              url: RESUME_DATA.personalWebsiteUrl,
+              title: "Personal Website",
+            },
+            ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
+              url: socialMediaLink.url,
+              title: socialMediaLink.name,
+            })),
+            {
+              url: "#",
+              title: "Print CV",
+            },
+          ]}
+        />
+      </div>
     </main>
   );
 }

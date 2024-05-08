@@ -31,6 +31,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/images/logos/*.*"
-  ],
+, "src/components/DownloadAnim.tsx"  ],
   "exclude": ["node_modules"]
 }
