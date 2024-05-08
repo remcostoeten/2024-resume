@@ -120,7 +120,7 @@ export const RESUME_DATA = {
         "TypeScript",
         "NextJS",
         "TailwindCSS",
-        "Chromedriver",
+        "ChromeDriver",
         "Selenium",
       ],
       description:
@@ -153,7 +153,7 @@ export const RESUME_DATA = {
     },
     {
       title: "GraphQL GitHub API portfolio",
-      techStack: ["NextJS", "TypeScript", "Apollo", "Framer motion", "GraphQL"],
+      techStack: ["NextJS", "TypeScript", "Apollo", "Framer Motion", "GraphQL"],
       description: "...graphql github api portfolio, sleak design.",
       href: "https://github.com/remcostoeten/remcostoeten-landing",
     },
@@ -170,7 +170,7 @@ export const RESUME_DATA = {
       techStack: [
         "NextJS",
         "TypeScript",
-        "API routes",
+        "API Routes",
         "Tailwind",
         "Framer Motion",
         "GraphQL",
@@ -189,7 +189,7 @@ export const RESUME_DATA = {
     },
     {
       title: "WhatsApp Online Status Tracker",
-      techStack: ["Flask", "Python", "Selenium", "Chromedriver"],
+      techStack: ["Flask", "Python", "Selenium", "ChromeDriver"],
       description:
         "A tool that launches a chromedriver instance and scrapes the online status of a given WhatsApp user. Not because I condone stalking, but seemed like a cool project to learn scraping.",
       href: "https://github.com/remcostoeten/whatsapp-online-status-tracker",
@@ -197,7 +197,7 @@ export const RESUME_DATA = {
     },
     {
       title: "SVG to React Component Generator Scripts",
-      techStack: ["JavaScript", "script"],
+      techStack: ["JavaScript", "Script"],
       description:
         "A utility script to convert SVG files into React components. It reads SVGs from a directory, extracts content and attributes, and generates corresponding React components. Handles SVGs without specified dimensions by defaulting to 24x24. Components are named based on the SVG title or given a generic name.",
       href: "https://github.com/remcostoeten/svg-to-react-component-tag-generator",
@@ -221,8 +221,8 @@ export const RESUME_DATA = {
       techStack: [
         "NextJS",
         "TailwindCSS",
-        "Shadcn/ui",
-        "Radix-ui",
+        "Shadcn/UI",
+        "Radix-UI",
         "Clerk",
         "Firebase",
         "Planetscale",
