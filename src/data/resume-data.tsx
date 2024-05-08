@@ -93,7 +93,8 @@ export const RESUME_DATA = {
     "jQeury",
     "HTML",
     "CSS/SSS",
-    "Magento 2",
+    
+"REST",
     "Adobe Creative Suite",
     "Figma",
     "BaaS services (Firebase, Convex, etc.)",
