@@ -61,6 +61,17 @@ const DownloadPDFText: React.FC = () => {
     return () => clearTimeout(timer);
   }, [color]);
 
+  useEffect(() => {
+    const hideTimer = setTimeout(() => {
+      const container = document.getElementById("container");
+      if (container) {
+        container.style.display = "none";
+      }
+    }, 15000);
+
+    return () => clearTimeout(hideTimer);
+  }, []);
+
   return <div className="no-print" id="container"></div>;
 };
 
