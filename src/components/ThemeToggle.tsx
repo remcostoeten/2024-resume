@@ -11,7 +11,7 @@ const ThemeToggle = () => {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative print:hidden">
         <div className="fixed  right-0 top-2 z-50">
           <div className="switch">
             <label htmlFor="toggle">

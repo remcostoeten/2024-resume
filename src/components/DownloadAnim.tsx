@@ -61,7 +61,7 @@ const DownloadPDFText: React.FC = () => {
     return () => clearTimeout(timer);
   }, [color]);
 
-  return <div id="container"></div>;
+  return <div className="no-print" id="container"></div>;
 };
 
 export default DownloadPDFText;

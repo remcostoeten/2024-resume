@@ -13,11 +13,6 @@ import DownloadPDFText from "@/components/DownloadAnim";
 import Link from "next/link";
 import { LinkedInIcon } from "@/components/icons";
 
-export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
-  description: RESUME_DATA.summary,
-};
-
 export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
@@ -39,20 +34,20 @@ export default function Page() {
               </a>
             </p>
             <div className="flex gap-x-2 pt-1 font-mono text-sm text-muted-foreground print:hidden">
-              {RESUME_DATA.contact.email ? (
+              {RESUME_DATA.contact.email && (
                 <Button className="size-8" variant="social" size="icon" asChild>
                   <a href={`mailto:${RESUME_DATA.contact.email}`}>
                     <MailIcon className="size-4 w-4" />
                   </a>
                 </Button>
-              ) : null}
-              {RESUME_DATA.contact.tel ? (
+              )}
+              {RESUME_DATA.contact.tel && (
                 <Button className="size-8" variant="social" size="icon" asChild>
                   <a href={`tel:${RESUME_DATA.contact.tel}`}>
                     <PhoneIcon className="size-4" />
                   </a>
                 </Button>
-              ) : null}
+              )}
               <Button className="size-8" variant="social" size="icon" asChild>
                 <Link
                   href="https://www.linkedin.com/in/remco-stoeten/"
@@ -68,7 +63,7 @@ export default function Page() {
               </Button>
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
-              {RESUME_DATA.contact.email ? (
+              {RESUME_DATA.contact.email && (
                 <Button variant="social">
                   {" "}
                   <a href={`mailto:${RESUME_DATA.contact.email}`}>
@@ -77,26 +72,31 @@ export default function Page() {
                     </span>
                   </a>
                 </Button>
-              ) : null}
-              {RESUME_DATA.contact.tel ? (
+              )}
+              {RESUME_DATA.contact.tel && (
                 <Button variant="social">
                   <a href={`tel:${RESUME_DATA.contact.tel}`}>
                     <span className="underline">{RESUME_DATA.contact.tel}</span>
                   </a>
                 </Button>
-              ) : null}
+              )}
             </div>
           </div>
           <Avatar className="size-28">
-            <AvatarImage alt={RESUME_DATA.name} src="avatar.jpg"/>
+            <AvatarImage alt={RESUME_DATA.name} src="avatar.jpg" />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>
-          <p className="text-pretty font-mono text-sm text-muted-foreground">
-            {RESUME_DATA.summary}
-          </p>
+          <div className="flex flex-col gap-2">
+            <p className="text-pretty font-mono text-sm text-muted-foreground">
+              {RESUME_DATA.summary}
+            </p>
+            <p className="text-pretty font-mono text-sm text-muted-foreground">
+              {RESUME_DATA.summarytwo}
+            </p>
+          </div>
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
@@ -158,22 +158,31 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
+          <p>
+            {RESUME_DATA.skills.map((skill, index) => {
+              return <span key={index}>{skill.extrainfo}</span>;
+            })}
+          </p>
           <div className="flex flex-wrap gap-1">
-            {RESUME_DATA.skills.map((skill) => {
-              return <Badge key={skill}>{skill}</Badge>;
+            {RESUME_DATA.skills.map((skill, index) => {
+              return <Badge key={index}>{skill}</Badge>;
             })}
           </div>
         </Section>
         <Section className="print-force-new-page scroll-mb-16">
-        <h2 className="text-xl font-bold">Projects</h2>
-<p>Switch between my hobby projects and projects I've made or contributed to at work. There are a lot of private/client projects which I can't share for obvious reasons.</p>{" "}
+          <h2 className="text-xl font-bold">Projects</h2>
+          <p>
+            Switch between my hobby projects and projects I've made or
+            contributed to at work. There are a lot of private/client projects
+            which I can't share for obvious reasons.
+          </p>
           <ProjectsTabsComponent />
         </Section>
       </section>
-      <div className="no-print absolute right-0 top-0">
+      <div className="!no-print absolute right-0 top-0">
         <ThemeToggle />
       </div>
-      <div className="fixed no-print  bottom-24 right-12 z-50">
+      <div className="!no-print fixed bottom-24 right-12 z-50">
         <DownloadPDFText />
       </div>
       <div className="relative">
@@ -183,13 +192,15 @@ export default function Page() {
               url: RESUME_DATA.personalWebsiteUrl,
               title: "Personal Website",
             },
-            ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
+            ...RESUME_DATA.contact.social.map((socialMediaLink, index) => ({
               url: socialMediaLink.url,
               title: socialMediaLink.name,
+              key: index,
             })),
             {
               url: "#",
               title: "Print CV",
+              key: "print",
             },
           ]}
         />

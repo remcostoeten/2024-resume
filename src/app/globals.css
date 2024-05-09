@@ -142,7 +142,6 @@ body:not(.dark) .border-muted {
   border-color: #b9b9b7;
 }
 
-
 @media print {
   .no-print {
     display: none;

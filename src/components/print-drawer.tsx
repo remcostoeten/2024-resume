@@ -12,8 +12,27 @@ import {
   DrawerFooter,
   DrawerClose,
 } from "./ui/drawer";
+import { jsPDF } from "jspdf";
+import html2canvas from "html2canvas";
 
 export const PrintDrawer = () => {
+  const saveAsPDF = () => {
+    html2canvas(document.body).then((canvas) => {
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF();
+      pdf.addImage(imgData, "PNG", 0, 0);
+      pdf.save("download.pdf");
+    });
+  };
+
+  const printCV = () => {
+    const printWindow = window.open(window.location.href, "_blank");
+    if (printWindow) {
+      printWindow.onload = function () {
+        printWindow.print();
+      };
+    }
+  };
   return (
     <Drawer>
       <DrawerTrigger asChild>
@@ -29,11 +48,13 @@ export const PrintDrawer = () => {
           </DrawerHeader>
           <div className="p-4 pb-0"></div>
           <DrawerFooter>
-            <Button onClick={() => window.print()}>Print</Button>
+            <Button onClick={printCV}>Print</Button>
+            <Button onClick={saveAsPDF}>Save as PDF</Button>
             <DrawerClose asChild>
               <Button variant="outline">Cancel</Button>
             </DrawerClose>
           </DrawerFooter>
+          2{" "}
         </div>
       </DrawerContent>
     </Drawer>

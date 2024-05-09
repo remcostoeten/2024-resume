@@ -34,6 +34,8 @@ export const RESUME_DATA = {
     "Front-end engineer with a degree in graphic design. Aspiring to be more than a divjesschuiver.",
   summary:
     "Started off my journey in e-commerce building custom Magento 2 webshops. After that, I moved to SaaS, in-house for multinationals and currently employed in SaaS exclusively for non-profit and government organizations. My current go-to stack is Next.js (React), TypeScript, GraphQL/REST/own API paired with any styling solution whether it's Tailwind, modules, or styled components, and if needed a (cloud/BaaS) database provider like Firebase, Convex, or SQLite.",
+  summarytwo:
+    " Although my current focus is front-end focused, I have strong all-round technology interest and am quite involved in the space. I love exploring newer tools (e.g. Svelte, Solid, Qwik) but also have an interest in learning more complex languages like Rust, Zig, OCaml and on the short-term Go. I've done a little Python (scrapers, text-mutate-tools) and some Lua (game engine scripting, NeoVim configuration) and quite some Bash.",
   avatarUrl:
     "https://media.licdn.com/dms/image/C5603AQFIlU2oV2JEgg/profile-displayphoto-shrink_800_800/0/1638502874619?e=1720051200&v=beta&t=WH6KGzVg415TN9BmBKooANDwtbdnBPU9UHKYBi-tjL0",
   personalWebsiteUrl: "https://remcostoeten.com",
@@ -96,6 +98,8 @@ export const RESUME_DATA = {
         "Joined as a Front-end developer after an internship during media design studies. Developed from a complete beginner to a self-sufficient Front-end developer capable of translating UX designs into responsive code.",
     },
   ],
+  extrainfo:
+    "When I was first comming up we still deployed our work through manually drag and dropping over FTP so I know my way around the terminal,SSH/shells, proper version control, all the PM platforms (e.g. bitbucket, jira, gitlab, etc.). Worked in Scrum setting with a `agile` focused mindset. But also worked 100% autonomous without any project managers, or as of recent Kanban style with one meeting per week.  ",
   skills: [
     "JavaScript",
     "TypeScript ❤️",
