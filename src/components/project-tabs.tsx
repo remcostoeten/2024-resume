@@ -19,7 +19,7 @@ export default function ProjectTabs() {
         </TabsList>
 
         <TabsContent value="professionally">
-          <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
+          <div className="mx-1   grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
             {professionalProjects.map((project, index) => (
               <ProjectCard
                 key={index}
@@ -33,7 +33,7 @@ export default function ProjectTabs() {
         </TabsContent>
 
         <TabsContent value="hobby">
-          <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
+          <div className="m-2 mx-1 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
             {hobbyProjects.map((project, index) => (
               <ProjectCard
                 key={index}
@@ -49,7 +49,7 @@ export default function ProjectTabs() {
 
       {/* Print view */}
       <div className="hidden print:block">
-        <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
+        <div className="mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
           {RESUME_DATA.projects.map((project, index) => (
             <ProjectCard
               key={index}

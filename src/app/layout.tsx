@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "./globals.css";
 import React from "react";
+import InProgressToast from "@/components/NoticeToast";
 
 export const metadata: Metadata = {
   title: "Remco Stoten - Software Developer Resume",
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body>
         <>
           {children}
+          <InProgressToast />
           <Analytics /> <SpeedInsights />
         </>
       </body>

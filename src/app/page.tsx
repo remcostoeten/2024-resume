@@ -2,20 +2,18 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
-import { Metadata } from "next";
 import { Section } from "@/components/ui/section";
 import { GithubIcon, GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import ThemeToggle from "@/components/ThemeToggle";
 import ProjectsTabsComponent from "@/components/project-tabs";
-import DownloadPDFText from "@/components/DownloadAnim";
 import Link from "next/link";
 import { LinkedInIcon } from "@/components/icons";
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12 ">
       <section className="mx-auto w-full max-w-2xl space-y-8 print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
@@ -158,11 +156,6 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
-          <p>
-            {RESUME_DATA.skills.map((skill, index) => {
-              return <span key={index}>{skill.extrainfo}</span>;
-            })}
-          </p>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill, index) => {
               return <Badge key={index}>{skill}</Badge>;
@@ -182,9 +175,6 @@ export default function Page() {
       <div className="!no-print absolute right-0 top-0">
         <ThemeToggle />
       </div>
-      <div className="!no-print fixed bottom-24 right-12 z-50">
-        <DownloadPDFText />
-      </div>
       <div className="relative">
         <CommandMenu
           links={[
@@ -197,11 +187,6 @@ export default function Page() {
               title: socialMediaLink.name,
               key: index,
             })),
-            {
-              url: "#",
-              title: "Print CV",
-              key: "print",
-            },
           ]}
         />
       </div>

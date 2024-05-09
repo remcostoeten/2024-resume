@@ -301,6 +301,7 @@ export const RESUME_DATA = {
   locationLink: string;
   about: string;
   summary: string;
+  summarytwo: string;
   avatarUrl: string;
   personalWebsiteUrl: string;
   contact: {
@@ -329,5 +330,6 @@ export const RESUME_DATA = {
     description: string;
   }[];
   skills: string[];
+  extrainfo: any;
   projects: Project[];
 };
