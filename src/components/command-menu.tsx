@@ -98,10 +98,13 @@ export const CommandMenu = ({ links }: Props) => {
             <CommandItem
               onSelect={() => {
                 setOpen(false);
-                window.print();
+                const link = document.createElement("a");
+                link.href = "/cvremcostoeten.pdf";
+                link.download = "cvremcostoeten.pdf";
+                link.click();
               }}
             >
-              <span>Download / print pdf</span>
+              <span>Download CV</span>
             </CommandItem>
           </CommandGroup>
           <CommandGroup heading="Links">

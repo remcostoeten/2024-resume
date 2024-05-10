@@ -16,15 +16,6 @@ import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
 
 export const PrintDrawer = () => {
-  const saveAsPDF = () => {
-    html2canvas(document.body).then((canvas) => {
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF();
-      pdf.addImage(imgData, "PNG", 0, 0);
-      pdf.save("download.pdf");
-    });
-  };
-
   const printCV = () => {
     const printWindow = window.open(window.location.href, "_blank");
     if (printWindow) {
@@ -49,7 +40,6 @@ export const PrintDrawer = () => {
           <div className="p-4 pb-0"></div>
           <DrawerFooter>
             <Button onClick={printCV}>Print</Button>
-            <Button onClick={saveAsPDF}>Save as PDF</Button>
             <DrawerClose asChild>
               <Button variant="outline">Cancel</Button>
             </DrawerClose>
