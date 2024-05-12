@@ -14,12 +14,6 @@ This project is a comprehensive resume showcasing Remco Stoeten's skills and exp
 - TypeScript
 - Tailwind CSS
 
-## How to Run
-
-1. Clone the repository.
-2. Install the dependencies with `pnpm i`.
-3. Run the development server with `npm dev`.
-
 ## Projects
 
 This resume includes several projects, such as:
