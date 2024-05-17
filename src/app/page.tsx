@@ -1,3 +1,4 @@
+"use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -10,8 +11,11 @@ import ThemeToggle from "@/components/ThemeToggle";
 import ProjectsTabsComponent from "@/components/project-tabs";
 import Link from "next/link";
 import { LinkedInIcon } from "@/components/icons";
+import { useTranslation } from "react-i18next";
 
 export default function Page() {
+  const { t } = useTranslation();
+
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12 ">
       <section className="mx-auto w-full max-w-2xl space-y-8 print:space-y-6">
@@ -19,7 +23,7 @@ export default function Page() {
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
-              {RESUME_DATA.about}
+              {t("about")}
             </p>
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
               <a
@@ -63,7 +67,6 @@ export default function Page() {
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
               {RESUME_DATA.contact.email && (
                 <Button variant="social">
-                  {" "}
                   <a href={`mailto:${RESUME_DATA.contact.email}`}>
                     <span className="underline">
                       {RESUME_DATA.contact.email}
@@ -86,18 +89,18 @@ export default function Page() {
           </Avatar>
         </div>
         <Section>
-          <h2 className="text-xl font-bold">About</h2>
+          <h2 className="text-xl font-bold">{t("aboutMe")}</h2>
           <div className="flex flex-col gap-2">
             <p className="text-pretty font-mono text-sm text-muted-foreground">
-              {RESUME_DATA.summary}
+              {t("summary")}
             </p>
             <p className="text-pretty font-mono text-sm text-muted-foreground">
-              {RESUME_DATA.summarytwo}
+              {t("summarytwo")}
             </p>
           </div>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Work Experience</h2>
+          <h2 className="text-xl font-bold">{t("workExperience")}</h2>
           {RESUME_DATA.work.map((work) => {
             return (
               <Card key={work.company}>
@@ -120,7 +123,7 @@ export default function Page() {
                       </span>
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
-                      {work.start} - {work.end ?? "Present"}
+                      {work.start} - {work.end ?? t("present")}
                     </div>
                   </div>
                   <h4 className="font-mono text-sm leading-none">
@@ -135,7 +138,7 @@ export default function Page() {
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Education</h2>
+          <h2 className="text-xl font-bold">{t("education")}</h2>
           {RESUME_DATA.education.map((education) => {
             return (
               <Card key={education.school}>
@@ -155,7 +158,7 @@ export default function Page() {
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Skills</h2>
+          <h2 className="text-xl font-bold">{t("skills")}</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill, index) => {
               return <Badge key={index}>{skill}</Badge>;
@@ -163,12 +166,8 @@ export default function Page() {
           </div>
         </Section>
         <Section className="print-force-new-page scroll-mb-16">
-          <h2 className="text-xl font-bold">Projects</h2>
-          <p>
-            Switch between my hobby projects and projects I've made or
-            contributed to at work. There are a lot of private/client projects
-            which I can't share for obvious reasons.
-          </p>
+          <h2 className="text-xl font-bold">{t("projects")}</h2>
+          <p>{t("projectsDescription")}</p>
           <ProjectsTabsComponent />
         </Section>
       </section>
@@ -180,7 +179,7 @@ export default function Page() {
           links={[
             {
               url: RESUME_DATA.personalWebsiteUrl,
-              title: "Personal Website",
+              title: t("personalWebsite"),
             },
             ...RESUME_DATA.contact.social.map((socialMediaLink, index) => ({
               url: socialMediaLink.url,

@@ -1,38 +1,31 @@
-import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react";
-import { Inter } from "next/font/google";
-
-import { SpeedInsights } from "@vercel/speed-insights/next";
-
+import { ReactNode } from "react";
 import "./globals.css";
-import React from "react";
+import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import InProgressToast from "@/components/NoticeToast";
-
-export const metadata: Metadata = {
-  title: "Remco Stoten - Software Developer Resume",
-  description:
-    "A comprehensive resume showcasing Remco Stoten's skills and experiences as a software developer.",
-};
+import LanguageSwitcher from "@/components/languageToggle";
+import PosthogProvider from "@/core/PosthogProvider";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body>
-        <>
-          {children}
-          <InProgressToast />
-          <Analytics /> <SpeedInsights />
-        </>
-      </body>
-    </html>
+    <PosthogProvider>
+      <html lang="en" className={inter.className}>
+        <body>
+          <>
+            <LanguageSwitcher />
+            {children}
+            <InProgressToast />
+            <Analytics />
+            <SpeedInsights />
+          </>
+        </body>
+      </html>
+    </PosthogProvider>
   );
 }
