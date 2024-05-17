@@ -1,5 +1,5 @@
-'use client';
-import { useTranslation } from 'react-i18next';
+"use client";
+import { useTranslation } from "react-i18next";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -10,8 +10,8 @@ const LanguageSwitcher = () => {
 
   return (
     <div className="language-switcher">
-      <button onClick={() => changeLanguage('en')}>English</button>
-      <button onClick={() => changeLanguage('nl')}>Nederlands</button>
+      <button onClick={() => changeLanguage("en")}>English</button>
+      <button onClick={() => changeLanguage("nl")}>Nederlands</button>
     </div>
   );
 };
