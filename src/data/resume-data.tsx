@@ -76,7 +76,7 @@ export const RESUME_DATA = {
         "SaaS provider exclusively for non-profit organizations and governments. Primarily working on the Pleio-platform (Intranet site builder in React, GraphQL). Also various tax and politic-heavy applications. Everything fully WCAG compliant and open source.",
     },
     {
-      company: "Distil BV",
+      company: "Lasaulec / Distil BV",
       link: "https://distil.nl",
       badges: ["Remote"],
       title: "Developer",
@@ -99,7 +99,7 @@ export const RESUME_DATA = {
     },
   ],
   extrainfo:
-    "When I was first comming up we still deployed our work through manually drag and dropping over FTP so I know my way around the terminal,SSH/shells, proper version control, all the PM platforms (e.g. bitbucket, jira, gitlab, etc.). Worked in Scrum setting with a `agile` focused mindset. But also worked 100% autonomous without any project managers, or as of recent Kanban style with one meeting per week.  ",
+    "When I was first comming up we still deployed our work through manually drag and dropping over FTP so I know my way around the terminal,SSH/shells, proper version control, all the PM platforms (e.g. Bitbucket, Jira, Gitlab, etc.). Worked in Scrum setting with a `agile` focused mindset. But also worked 100% autonomous without any project managers, or as of recent Kanban style with one meeting per week. Kanban seems to be the sweet spot in efficency.  ",
   skills: [
     "JavaScript",
     "TypeScript ❤️",
@@ -124,6 +124,28 @@ export const RESUME_DATA = {
     "Docker",
   ],
   projects: [
+    {
+      title: "My personal all in one platform",
+      description:
+        "Just started, going to be a combination off all the tools i've build of planned on in one personal platform. Mainly because I don't want to host dozens of small projects and I want to have a single source of truth for all my tools. ",
+      techStack: [
+        "NextJS",
+        "TypeScript",
+        "SQlite (turso in the ☁️",
+        "Tailwind",
+        "Clerk auth",
+        "list goes on...",
+      ],
+      href: "https://github.com/remcostoeten/personal-platform",
+      live: "https://panel.remcostoeten.com",
+    },
+    {
+      title: "custom commitizen adapter (NPM package -g)",
+      techStack: ["Node", "JavaScript"],
+      description:
+        "A custom commitizen adapter that I use to enforce a certain commit message structure. It's a global package that I use in all my projects. Make it look like you know what you're doing.",
+      href: "https://www.npmjs.com/package/cleaner-commitizen-adapter",
+    },
     {
       title: "MineSweeper",
       techStack: ["TypeScript", "NextJS", "BaaS", "Convex", "Tailwind"],

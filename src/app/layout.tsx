@@ -9,9 +9,9 @@ import React from "react";
 import InProgressToast from "@/components/NoticeToast";
 
 export const metadata: Metadata = {
-  title: "Remco Stoten - Software Developer Resume",
+  title: "Remco Stoeten - Front-end Developer Resume",
   description:
-    "A comprehensive resume showcasing Remco Stoten's skills and experiences as a software developer.",
+    "Front-end engineer with a graphic design degree, or as we say in the Netherlands, a divjesschuiver. Aspiring to becoming an all-round engineer with knowledge of back-end, dev-ops. If it's tech, I am interested.",
 };
 
 const inter = Inter({
@@ -30,7 +30,8 @@ export default function RootLayout({
         <>
           {children}
           <InProgressToast />
-          <Analytics /> <SpeedInsights />
+          <Analytics />
+          <SpeedInsights />
         </>
       </body>
     </html>
