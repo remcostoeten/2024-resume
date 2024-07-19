@@ -136,7 +136,7 @@ export const RESUME_DATA = {
         "Clerk auth",
         "list goes on...",
       ],
-      href: "https://github.com/remcostoeten/personal-platform",
+      href: "https://github.com/remcostoeten/remcostoeten-all-in-one-dashboard",
       live: "https://panel.remcostoeten.com",
     },
     {

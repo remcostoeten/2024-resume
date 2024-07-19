@@ -13,29 +13,29 @@ import { LinkedInIcon } from "@/components/icons";
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12 ">
-      <section className="mx-auto w-full max-w-2xl space-y-8 print:space-y-6">
+    <main className="container relative p-4 mx-auto overflow-auto scroll-my-12 md:p-16 print:p-12 ">
+      <section className="w-full max-w-2xl mx-auto space-y-8 print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
+            <p className="max-w-md font-mono text-sm text-pretty text-muted-foreground">
               {RESUME_DATA.about}
             </p>
-            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
+            <p className="items-center max-w-md font-mono text-xs text-pretty text-muted-foreground">
               <a
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
-                href={RESUME_DATA.locationLink}
+                href={RESUME_DATA.locationLink}g pu
                 target="_blank"
               >
                 <GlobeIcon className="size-3" />
                 {RESUME_DATA.location}
               </a>
             </p>
-            <div className="flex gap-x-2 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+            <div className="flex pt-1 font-mono text-sm gap-x-2 text-muted-foreground print:hidden">
               {RESUME_DATA.contact.email && (
                 <Button className="size-8" variant="social" size="icon" asChild>
                   <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                    <MailIcon className="size-4 w-4" />
+                    <MailIcon className="w-4 size-4" />
                   </a>
                 </Button>
               )}
@@ -60,7 +60,7 @@ export default function Page() {
                 </Link>
               </Button>
             </div>
-            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
+            <div className="flex-col hidden font-mono text-sm gap-x-1 text-muted-foreground print:flex">
               {RESUME_DATA.contact.email && (
                 <Button variant="social">
                   {" "}
@@ -88,10 +88,10 @@ export default function Page() {
         <Section>
           <h2 className="text-xl font-bold">About</h2>
           <div className="flex flex-col gap-2">
-            <p className="text-pretty font-mono text-sm text-muted-foreground">
+            <p className="font-mono text-sm text-pretty text-muted-foreground">
               {RESUME_DATA.summary}
             </p>
-            <p className="text-pretty font-mono text-sm text-muted-foreground">
+            <p className="font-mono text-sm text-pretty text-muted-foreground">
               {RESUME_DATA.summarytwo}
             </p>
           </div>
@@ -102,8 +102,8 @@ export default function Page() {
             return (
               <Card key={work.company}>
                 <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                  <div className="flex items-center justify-between text-base gap-x-2">
+                    <h3 className="inline-flex items-center justify-center font-semibold leading-none gap-x-1">
                       <a className="hover:underline" href={work.link}>
                         {work.company}
                       </a>
@@ -111,7 +111,7 @@ export default function Page() {
                         {work.badges.map((badge) => (
                           <Badge
                             variant="secondary"
-                            className="align-middle text-xs"
+                            className="text-xs align-middle"
                             key={badge}
                           >
                             {badge}
@@ -119,7 +119,7 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm text-gray-500 tabular-nums">
                       {work.start} - {work.end ?? "Present"}
                     </div>
                   </div>
@@ -140,11 +140,11 @@ export default function Page() {
             return (
               <Card key={education.school}>
                 <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
+                  <div className="flex items-center justify-between text-base gap-x-2">
                     <h3 className="font-semibold leading-none">
                       {education.school}
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm text-gray-500 tabular-nums">
                       {education.start} - {education.end}
                     </div>
                   </div>
