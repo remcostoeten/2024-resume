@@ -65,12 +65,34 @@ export const RESUME_DATA = {
   ],
   work: [
     {
+      company: "Exact Online",
+      link: "https://exact.com",
+      badges: ["Hybrid"],
+      title: "Software Engineer",
+      logo: "", // Add logo here
+      start: "2024 - PResent",
+      end: "present",
+      description:
+        "Working on Exact Online's software, primairly the construction application.. Building and maintaining features for financial management, invoicing, and business operations using modern web technologies. Servng close to all MKB (small businesses) in the Netherlands.",
+    },
+    {
+      company: "NLZIET",
+      link: "https://nlziet.nl",
+      badges: ["Hybrid"],
+      title: "Frontend Developer",
+      logo: "", // Add logo here
+      start: "2024",
+      end: "2024",
+      description:
+        "Developed and maintained streaming platform features for the Netherlands' largest streaming service collaboration. Worked on improving user experience and performance across web and smart TV applications.",
+    },
+    {
       company: "Pleio - online samenwerken",
       link: "http://pleio.nl",
       badges: ["Remote"],
       title: "Frontend Developer",
       logo: "", // Add logo here
-      start: "2023",
+      start: "2023 - 2024",
       end: "present",
       description:
         "SaaS provider exclusively for non-profit organizations and governments. Primarily working on the Pleio-platform (Intranet site builder in React, GraphQL). Also various tax and politic-heavy applications. Everything fully WCAG compliant and open source.",
