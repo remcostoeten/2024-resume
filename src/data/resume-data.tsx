@@ -70,7 +70,7 @@ export const RESUME_DATA = {
       badges: ["Hybrid"],
       title: "Software Engineer",
       logo: "", // Add logo here
-      start: "2024 - PResent",
+      start: "2024 - Present",
       end: "present",
       description:
         "Working on Exact Online's software, primairly the construction application.. Building and maintaining features for financial management, invoicing, and business operations using modern web technologies. Servng close to all MKB (small businesses) in the Netherlands.",
