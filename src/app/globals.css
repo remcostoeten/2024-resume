@@ -408,3 +408,7 @@ body:not(.dark) .border-muted {
   border: 0.25rem solid #78c1d5;
   background: linear-gradient(to right, #78c1d5 0%, #bbe7f5 100%);
 }
+
+p.sub-text {
+  font-size: 0.8rem;
+}
