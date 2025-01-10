@@ -18,12 +18,12 @@ import { useState } from "react";
 function AboutSection() {
   const [isExpanded, setIsExpanded] = useState(false);
   
-  const shortText = "years of full-time employment.";
-  const fullText = "years of full-time employment. After that, I've exclusively worked mostly for SaaS and high traffic applications. Varying from European market leaders in construction tooling and infrastructure, to exclusively operating for non-profit and government. Building FSV, a portal for seeing your procedure if you got caught with heavy tax fraud, and their intranet builder for anyone non-profit. And their multi-SaaS platform which was used by hundreds of thousands of government employees, an intranet builder. Fast forward to my current position at Exact Online, construction department. Building a SaaS platform for construction companies where most MKBs (businesses: any) in the Netherlands make use of. Varying from planning, invoicing, payroll, and more.";
+  const shortText = "Initially starte of with an intership at a...  agency building custom Magento 2 shops for various B2B and B..";
+  const fullText = "Initially starte of with an intership at a...  agency building custom Magento 2 shops for various B2B and B..2C shops, learning the craft of pixel perfect after 5,5 years of full-time employment. After that, I've exclusively worked mostly for SaaS and high traffic applications. Varying from European market leaders in construction tooling and infrastructure, to exclusively operating for non-profit and government. Building FSV, a portal for seeing your procedure if you got caught with heavy tax fraud, and their intranet builder for anyone non-profit. And their multi-SaaS platform which was used by hundreds of thousands of government employees, an intranet builder. Fast forward to my current position at Exact Online, construction department. Building a SaaS platform for construction companies where most MKBs (businesses: any) in the Netherlands make use of. Varying from planning, invoicing, payroll, and more.";
 
   return (
     <Section>
-      <h2 className="text-xl font-bold">About</h2>
+      <h2 className="text-xl font-bold">Some history</h2>
       <div className="flex flex-col gap-2">
         <div className="font-mono text-sm text-pretty">
           <span className="font-semibold text-primary">TLDR: </span>
@@ -36,6 +36,8 @@ function AboutSection() {
             through various custom tooling.
           </span>
         </div>
+        <hr/>
+        <h3 className="text-md font-bold">For those who really want to know the entire path </h3>
         <p className="font-mono text-sm text-pretty text-muted-foreground">
           {isExpanded ? fullText : shortText}
           <button 
