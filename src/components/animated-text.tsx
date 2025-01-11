@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const words = [
-  "a divjesschuiver - (c) a previous back-end dev colleague",
+  "a divjesschuiver <span className='text-[12px]'>- (c) a previous back-end dev colleague</span>",
   "A FE dev that thinks that full-stack is knowing some CRUD",
   "someone who actually knows how to center a div, without googling.",
   "Being a code-monkey building sites for the local hair dresser or uncle Bobs gardenings service"
@@ -45,9 +45,8 @@ export function AnimatedText() {
             duration: 0.4,
             ease: [0.16, 1, 0.3, 1]
           }}
-        >
-          {words[currentIndex]}
-        </motion.span>
+          dangerouslySetInnerHTML={{ __html: words[currentIndex] }}
+        />
       </AnimatePresence>
     </span>
   );

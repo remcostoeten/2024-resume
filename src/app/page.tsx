@@ -18,7 +18,7 @@ import { useState } from "react";
 function AboutSection() {
   const [isExpanded, setIsExpanded] = useState(false);
   
-  const shortText = "Initially starte of with an intership at a...  agency building custom Magento 2 shops for various B2B and B..";
+  const shortText = "Initially starte of with an intership at a  agency building custom Magento 2 shops for various B2B and B..";
   const fullText = "Initially starte of with an intership at a...  agency building custom Magento 2 shops for various B2B and B..2C shops, learning the craft of pixel perfect after 5,5 years of full-time employment. After that, I've exclusively worked mostly for SaaS and high traffic applications. Varying from European market leaders in construction tooling and infrastructure, to exclusively operating for non-profit and government. Building FSV, a portal for seeing your procedure if you got caught with heavy tax fraud, and their intranet builder for anyone non-profit. And their multi-SaaS platform which was used by hundreds of thousands of government employees, an intranet builder. Fast forward to my current position at Exact Online, construction department. Building a SaaS platform for construction companies where most MKBs (businesses: any) in the Netherlands make use of. Varying from planning, invoicing, payroll, and more.";
 
   return (
@@ -26,14 +26,13 @@ function AboutSection() {
       <h2 className="text-xl font-bold">Some history</h2>
       <div className="flex flex-col gap-2">
         <div className="font-mono text-sm text-pretty">
-          <span className="font-semibold text-primary">TLDR: </span>
+          <div className="flex border-b items-center gap-2"><span className="font-semibold text-primary">TLDR: </span><small className="text-[10px] text-muted-foreground">(but still quite long 🤓) </small> </div>
           <span className="text-muted-foreground">
-            A tech head with a graphic design degree having loads of experience in (Magento) e-commerce, 
-            nailing custom designs, having worked in either a die-hard scrum setting, fully autonomous 100% remote, 
-            kanban style or ad-hoc. With a preference for building SaaS or e-commerce from the ground up in NextJS, 
-            TypeScript and TailwindCSS (or CSS/styled components or native), but also has the ambition to become 
-            an engineer who&apos;s proficient in dev-ops, and back-end and a passion for improving DX/efficiency 
-            through various custom tooling.
+            (front-end) engineer with a college degree in Graphic Design, Loads of experience in e-commerce (Magento 1 & 2) and SaaS platforms (Primarily React, NextJS,J&TSX).
+            Prefer writing in modern web stack (Next.js, TypeScript, TailwindCSS- atlast, for hobby projects)- Obsesed with DX experience, automating tasks and creating intuitive CLI tools or scripts to enhance DX and productivity- and just as important, having fun.
+
+            Experienced in various team environments from agile/scrum to fully remote.
+            Currently focused on government/non-profit sector while expanding into full-stack development and DevOps.
           </span>
         </div>
         <hr/>
@@ -48,9 +47,10 @@ function AboutSection() {
           </button>
         </p>
         <hr/>
-        <p className="font-mono text-[16px] text-pretty text-muted-foreground mt-2">
-          Although my current focus is front-end focused, I have a strong all-round technology interest and am quite involved in the space. I love exploring newer tools (e.g. Svelte, Solid, Qwik) but also have an interest in learning more complex languages like Rust, Zig, OCaml and on the short-term Go. I&apos;ve done a little Python (scrapers, text-mutate-tools) and some Lua (game engine scripting, NeoVim configuration) and quite some Bash.
-        </p>
+        <p className="text-sm italic text-pretty text-muted-foreground mt-2 text-md">
+          Althrough I am a front-end focused engineer, I have a strong all-round technology interest and am quite involved in the dev space. I've built some things in frameworks like Svelte, Qwik, Solid. But also recently tried some Golang, moved away from document databases and started using Postgres/SQ(lite), dockerizing and automating tasks with scripts. Aiming to, someday, become an engineer that does not think in syntax, but rather in the problem domain and can solve problems with the right tool for the job.
+          <small className="blocktext-[8px]">...If only we had more hours in a day...</small>
+          </p>
         <a 
           href="https://remcostoeten.com" 
           target="_blank" 
@@ -314,7 +314,7 @@ export default function Page() {
           <p className="sub-text">
             Switch between my hobby projects and projects I&apos;ve made or
             contributed to at work. There are a lot of private/client projects
-            which I can&apos;t share for obvious reasons.
+            which I can&apos;t share for obvious reasons. Small selection, I have tens, if not hundreds of projects locally close to MVP or abandoned.
           </p>
           <div className="mt-4">
             <ProjectSection projects={RESUME_DATA.projects} />
