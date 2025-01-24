@@ -149,21 +149,10 @@ export const RESUME_DATA: ResumeData = {
       badges: ["Hybrid"],
       title: "Software Engineer",
       logo: "", // Add logo here
-      start: "2024 - Present",
+      start: "2024",
       end: "present",
       description:
         "Working on Exact Online's software, primarily the construction application. Building and maintaining features for financial management, invoicing, and business operations using modern web technologies. Serving close to all MKB (small businesses) in the Netherlands.\n\nFast forward to my current position at Exact Online, construction department. Building a SaaS platform for construction companies where most MKBs (small businesses) in the Netherlands make use of. Varying from planning, invoicing, payroll, and more.",
-    },
-    {
-      company: "NLZIET",
-      link: "https://nlziet.nl",
-      badges: ["Hybrid"],
-      title: "Frontend Developer",
-      logo: "", // Add logo here
-      start: "2024",
-      end: "2024",
-      description:
-        "Developed and maintained streaming platform features for the Netherlands' largest streaming service collaboration. Worked on improving user experience and performance across web and smart TV applications.",
     },
     {
       company: "Pleio - Online Samenwerken",
@@ -171,8 +160,8 @@ export const RESUME_DATA: ResumeData = {
       badges: ["Remote"],
       title: "Frontend Developer",
       logo: "", // Add logo here
-      start: "2023 - 2024",
-      end: "present",
+      start: "2023",
+      end: "2024",
       description:
         "SaaS provider exclusively for non-profit organizations and governments. Primarily working on the Pleio-platform (Intranet site builder in React, GraphQL) and various tax and politic-heavy applications (all open source). Everything fully WCAG compliant and open source.",
     },
