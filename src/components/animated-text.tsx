@@ -7,7 +7,7 @@ const words = [
   "a divjesschuiver <span className='text-[12px]'>- (c) a previous back-end dev colleague</span>",
   "A FE dev that thinks that full-stack is knowing some CRUD",
   "someone who actually knows how to center a div, without googling.",
-  "Being a code-monkey building sites for the local hair dresser or uncle Bobs gardenings service"
+  "being a code-monkey building sites for the local hair dresser or uncle Bobs gardenings service"
 ];
 
 export function AnimatedText() {
@@ -50,4 +50,4 @@ export function AnimatedText() {
       </AnimatePresence>
     </span>
   );
-} 
+}

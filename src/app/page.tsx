@@ -18,8 +18,8 @@ import { useState } from "react";
 function AboutSection() {
   const [isExpanded, setIsExpanded] = useState(false);
   
-  const shortText = "Initially starte of with an intership at a  agency building custom Magento 2 shops for various B2B and B..";
-  const fullText = "Initially starte of with an intership at a...  agency building custom Magento 2 shops for various B2B and B..2C shops, learning the craft of pixel perfect after 5,5 years of full-time employment. After that, I've exclusively worked mostly for SaaS and high traffic applications. Varying from European market leaders in construction tooling and infrastructure, to exclusively operating for non-profit and government. Building FSV, a portal for seeing your procedure if you got caught with heavy tax fraud, and their intranet builder for anyone non-profit. And their multi-SaaS platform which was used by hundreds of thousands of government employees, an intranet builder. Fast forward to my current position at Exact Online, construction department. Building a SaaS platform for construction companies where most MKBs (businesses: any) in the Netherlands make use of. Varying from planning, invoicing, payroll, and more.";
+  const shortText = "Initially started with an internship at a digital agency building custom Magento 2 shops for various B2B and B2C clients, I learned the craft of pixel-perfect design during 5.5 years of full-time employment. After that, I transitioned to working exclusively on SaaS and high-traffic applications.";
+  const fullText = "Initially started with an internship at a digital agency building custom Magento 2 shops for various B2B and B2C clients, I learned the craft of pixel-perfect design during 5.5 years of full-time employment. After that, I transitioned to working exclusively on SaaS and high-traffic applications. These projects ranged from European market leaders in construction tooling and infrastructure to non-profit and government organizations. I contributed to building FSV, a portal for tracking procedures related to heavy tax fraud cases, and their intranet builder tailored for non-profits. Additionally, I worked on a multi-SaaS platform used by hundreds of thousands of government employees for managing intranet services. Fast forward to my current position at Exact Online, within the construction department. Here, I am helping build a SaaS platform for construction companies, widely used by most MKBs (small and medium-sized businesses) in the Netherlands. The platform covers a range of functionalities, including planning, invoicing, payroll, and more.";
 
   return (
     <Section>
@@ -51,13 +51,6 @@ function AboutSection() {
           Althrough I am a front-end focused engineer, I have a strong all-round technology interest and am quite involved in the dev space. I've built some things in frameworks like Svelte, Qwik, Solid. But also recently tried some Golang, moved away from document databases and started using Postgres/SQ(lite), dockerizing and automating tasks with scripts. Aiming to, someday, become an engineer that does not think in syntax, but rather in the problem domain and can solve problems with the right tool for the job.
           <small className="blocktext-[8px]">...If only we had more hours in a day...</small>
           </p>
-        <a 
-          href="https://remcostoeten.com" 
-          target="_blank" 
-          className="font-mono text-sm text-primary hover:text-primary/80 underline decoration-dashed underline-offset-4"
-        >
-          remcostoeten.com
-        </a>
       </div>
     </Section>
   );
@@ -312,7 +305,7 @@ export default function Page() {
         <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
           <p className="sub-text">
-            Switch between my hobby projects and projects I&apos;ve made or
+          Switch between my hobby projects and projects I&apos;ve made or
             contributed to at work. There are a lot of private/client projects
             which I can&apos;t share for obvious reasons. Small selection, I have tens, if not hundreds of projects locally close to MVP or abandoned.
           </p>
