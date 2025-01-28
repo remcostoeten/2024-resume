@@ -96,7 +96,7 @@ export const RESUME_DATA: ResumeData = {
   location: "Lemmer, the Netherlands, CET",
   locationLink: "https://www.google.com/maps/place/Lemmer",
   about: (
-    <div className="w-full !text-xs min-h-[100px] text-balance">
+    <div className="w-full !text-xs min-h-[100px]">
       Front-end engineer with a degree in graphic design. Aspiring to be more than <AnimatedText />
     </div>
   ),

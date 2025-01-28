@@ -125,6 +125,7 @@ body:not(.dark) .tabs.bg-muted {
 
 * {
   box-sizing: border-box;
+  text-wrap: balance !important;
 }
 
 .dark {
@@ -412,3 +413,4 @@ body:not(.dark) .border-muted {
 p.sub-text {
   font-size: 0.8rem;
 }
+
