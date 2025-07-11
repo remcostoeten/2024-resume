@@ -4,6 +4,12 @@ export default function Page() {
   return <ResumeEditorView />;
 }
 
+import ResumeEditorView from '@/views/resume-editor-view';
+
+export default function Page() {
+  return <ResumeEditorView />;
+}
+
   classic: {
     name: "Classic Traditional",
     description: "Traditional format ideal for corporate and formal positions",
