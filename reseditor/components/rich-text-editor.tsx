@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Bold, Italic, List, Link } from "lucide-react"
 import { TooltipProvider, Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 
-interface RichTextEditorProps {
+type TProps = {
   value: string
   onChange: (value: string) => void
   placeholder?: string
@@ -14,7 +14,7 @@ interface RichTextEditorProps {
   className?: string
 }
 
-export function RichTextEditor({ value, onChange, placeholder, rows = 4, className }: RichTextEditorProps) {
+export function RichTextEditor({ value, onChange, placeholder, rows = 4, className }: TProps) {
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   const insertText = useCallback(
