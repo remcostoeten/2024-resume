@@ -52,9 +52,9 @@ type Action =
       toastId?: ToasterToast["id"]
     }
 
-interface State {
-  toasts: ToasterToast[]
-}
+import type { TToastState } from "@/src/types/resume-types"
+
+type State = TToastState
 
 const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>()
 

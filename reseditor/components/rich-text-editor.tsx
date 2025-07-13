@@ -1,10 +1,10 @@
 "use client"
 
 import { useRef, useCallback } from "react"
-import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/shared/ui/button"
+import { Textarea } from "@/shared/ui/textarea"
 import { Bold, Italic, List, Link } from "lucide-react"
-import { TooltipProvider, Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
+import { TooltipProvider, Tooltip, TooltipContent, TooltipTrigger } from "@/shared/ui/tooltip"
 
 type TProps = {
   value: string
@@ -91,8 +91,10 @@ export function RichTextEditor({ value, onChange, placeholder, rows = 4, classNa
         <div className="flex items-center gap-1 p-2 border rounded-t-md bg-gray-50">
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button type="button" variant="ghost" size="sm" onClick={formatBold} className="h-8 w-8 p-0">
-                <Bold className="h-4 w-4" />
+              <Button type="button" variant="ghost" size="sm" onClick={formatBold} className="h-8 w-8 p-0" asChild>
+                <button>
+                  <Bold className="h-4 w-4" />
+                </button>
               </Button>
             </TooltipTrigger>
             <TooltipContent>Bold (**text**)</TooltipContent>
@@ -100,8 +102,10 @@ export function RichTextEditor({ value, onChange, placeholder, rows = 4, classNa
 
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button type="button" variant="ghost" size="sm" onClick={formatItalic} className="h-8 w-8 p-0">
-                <Italic className="h-4 w-4" />
+              <Button type="button" variant="ghost" size="sm" onClick={formatItalic} className="h-8 w-8 p-0" asChild>
+                <button>
+                  <Italic className="h-4 w-4" />
+                </button>
               </Button>
             </TooltipTrigger>
             <TooltipContent>Italic (*text*)</TooltipContent>
@@ -109,8 +113,10 @@ export function RichTextEditor({ value, onChange, placeholder, rows = 4, classNa
 
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button type="button" variant="ghost" size="sm" onClick={insertBulletPoint} className="h-8 w-8 p-0">
-                <List className="h-4 w-4" />
+              <Button type="button" variant="ghost" size="sm" onClick={insertBulletPoint} className="h-8 w-8 p-0" asChild>
+                <button>
+                  <List className="h-4 w-4" />
+                </button>
               </Button>
             </TooltipTrigger>
             <TooltipContent>Bullet Point (• )</TooltipContent>
@@ -118,8 +124,10 @@ export function RichTextEditor({ value, onChange, placeholder, rows = 4, classNa
 
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button type="button" variant="ghost" size="sm" onClick={insertLink} className="h-8 w-8 p-0">
-                <Link className="h-4 w-4" />
+              <Button type="button" variant="ghost" size="sm" onClick={insertLink} className="h-8 w-8 p-0" asChild>
+                <button>
+                  <Link className="h-4 w-4" />
+                </button>
               </Button>
             </TooltipTrigger>
             <TooltipContent>Insert Link</TooltipContent>
