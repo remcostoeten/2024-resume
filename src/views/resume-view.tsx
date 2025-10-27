@@ -120,7 +120,7 @@ export default function ResumeView() {
 
   return (
     <div className="bg-background text-sm text-foreground antialiased print:m-0 print:bg-white min-h-screen">
-      <div className="sticky top-0 z-40 hidden sm:block print:hidden">
+      <div className="sticky top-0 z-max hidden sm:block print:hidden">
         <div className="border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
           <div className="mx-auto max-w-4xl px-4 py-3 flex items-center justify-between">
             <div className="text-xs font-medium text-muted-foreground">Resume</div>
@@ -219,16 +219,7 @@ export default function ResumeView() {
         />
       </div>
 
-      <div className="hidden justify-center py-10 opacity-50 sm:flex print:hidden">
-        <a href="/" data-discover="true">
-          <button className="inline-flex scale-100 items-center justify-center rounded-sm ring-offset-background transition-[transform,background-color] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary focus-visible:ring-offset-2 active:scale-95 disabled:pointer-events-none disabled:opacity-50 hover:bg-secondary hover:text-secondary-foreground h-8 px-4 space-x-1.5 text-xs font-normal">
-            <span>Built with</span>
-            <img src="/icon/light.svg" width="12" height="12" alt="Reactive Resume" className="rounded-sm" />
-            <span>Reactive Resume</span>
-          </button>
-        </a>
-      </div>
-
+  
       <div role="region" aria-label="Notifications (F8)" tabIndex={-1} style={{ pointerEvents: 'none' }}>
         <ol tabIndex={-1} className="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]" />
       </div>
