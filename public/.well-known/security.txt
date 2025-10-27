@@ -1,0 +1,4 @@
+Contact: security@remcos.cv
+Expires: 2026-10-27T00:00:00Z
+Preferred-Languages: en
+Canonical: https://remcos.cv/.well-known/security.txt
