@@ -62,6 +62,15 @@ const nextConfig: NextConfig = {
             key: "Content-Disposition",
             value: "inline; filename=remco-stoeten.pdf",
           },
+          // Accessibility headers
+          {
+            key: "Content-Description",
+            value: "Resume of Remco Stoeten - Front-end Developer",
+          },
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
         ],
       },
     ];

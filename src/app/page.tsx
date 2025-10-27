@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import ResumeView from "@/views/resume-view";
-
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://remcos.cv";
+import { cfg } from "@/lib/cfg";
 
 export const metadata: Metadata = {
   title: "Remco Stoeten - Senior Software Engineer Resume & Portfolio",
@@ -10,10 +9,10 @@ export const metadata: Metadata = {
     title: "Remco Stoeten - Senior Software Engineer Resume & Portfolio",
     description: "Explore the professional resume and portfolio of Remco Stoeten.",
     type: "profile",
-    url: baseUrl,
+    url: cfg.BASE_URL,
     images: [
       {
-        url: `${baseUrl}/og-image.jpg`,
+        url: `${cfg.BASE_URL}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "Remco Stoeten Resume",

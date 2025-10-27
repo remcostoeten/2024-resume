@@ -1,6 +1,30 @@
 {
-  "name": "2024-resume",
+  "name": "remco-stoeten-2025-resume",
+  "description": "The CV from Remco Stoeten for 2025",
+  "author": "Remco Stoeten",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remcostoeten/remco-stoeten-2025-cv"
+  },
+  "homepage": "https://remcos.cv",
   "version": "0.1.0",
+  "keywords": [
+    "CV",
+    "Remco Stoeten",
+    "Software Engineer",
+    "Full-Stack Developer",
+    "Portfolio",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Software Architecture",
+    "Web Development",
+    "GraphQL",
+    "REST APIs",
+    "Cloud Development"
+  ],
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,13 +33,10 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@phosphor-icons/react": "^2.1.10",
-    "@phosphor-icons/web": "^2.1.2",
     "@radix-ui/react-slot": "^1.2.3",
     "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.548.0",
     "next": "16.0.0",
     "react": "19.2.0",
     "react-dom": "19.2.0",

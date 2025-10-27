@@ -1,20 +1,19 @@
 import { NextResponse } from "next/server";
+import { cfg } from "@/lib/cfg";
 
 export async function GET() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://remcos.cv";
-
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Person",
-        "@id": `${baseUrl}/#person`,
+        "@id": `${cfg.BASE_URL}/#person`,
         name: "Remco Stoeten",
-        url: baseUrl,
+        url: cfg.BASE_URL,
         sameAs: [
-          "https://twitter.com/remcostoeten",
-          "https://linkedin.com/in/remcostoeten",
-          "https://github.com/remcostoeten",
+          cfg.TWITTER_URL,
+          cfg.LINKEDIN_URL,
+          cfg.GITHUB_URL,
         ],
         jobTitle: "Senior Software Engineer",
         worksFor: {
@@ -40,28 +39,28 @@ export async function GET() {
       },
       {
         "@type": "WebSite",
-        "@id": `${baseUrl}/#website`,
-        url: baseUrl,
+        "@id": `${cfg.BASE_URL}/#website`,
+        url: cfg.BASE_URL,
         name: "Remco Stoeten Resume",
         description:
           "Professional resume and portfolio of Remco Stoeten, showcasing expertise in full-stack development, software architecture, and modern web technologies.",
         creator: {
-          "@id": `${baseUrl}/#person`,
+          "@id": `${cfg.BASE_URL}/#person`,
         },
         inLanguage: "en-US",
         isPartOf: {
-          "@id": `${baseUrl}/#organization`,
+          "@id": `${cfg.BASE_URL}/#organization`,
         },
       },
       {
         "@type": "WebPage",
-        "@id": `${baseUrl}/#webpage`,
-        url: baseUrl,
+        "@id": `${cfg.BASE_URL}/#webpage`,
+        url: cfg.BASE_URL,
         name: "Home",
         description:
           "Professional resume and portfolio of Remco Stoeten",
         isPartOf: {
-          "@id": `${baseUrl}/#website`,
+          "@id": `${cfg.BASE_URL}/#website`,
         },
         datePublished: "2024-01-01",
         dateModified: new Date().toISOString().split("T")[0],
@@ -69,14 +68,14 @@ export async function GET() {
       },
       {
         "@type": "Organization",
-        "@id": `${baseUrl}/#organization`,
+        "@id": `${cfg.BASE_URL}/#organization`,
         name: "Remco Stoeten",
-        url: baseUrl,
-        logo: `${baseUrl}/favicon.ico`,
+        url: cfg.BASE_URL,
+        logo: `${cfg.BASE_URL}/favicon.ico`,
         sameAs: [
-          "https://twitter.com/remcostoeten",
-          "https://linkedin.com/in/remcostoeten",
-          "https://github.com/remcostoeten",
+          cfg.TWITTER_URL,
+          cfg.LINKEDIN_URL,
+          cfg.GITHUB_URL,
         ],
       },
     ],

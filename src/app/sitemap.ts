@@ -1,12 +1,12 @@
 import { MetadataRoute } from 'next';
+import { cfg } from '@/lib/cfg';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://remcos.cv';
   const currentDate = new Date().toISOString();
 
   return [
     {
-      url: baseUrl,
+      url: cfg.BASE_URL,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 1.0,

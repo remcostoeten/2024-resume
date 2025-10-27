@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { cfg } from "@/lib/cfg";
 import "./globals.css";
 import { Toaster } from "sonner";
 
@@ -14,8 +15,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://remcos.cv";
-
 export const metadata: Metadata = {
   title: "Remco Stoeten - Senior Software Engineer Resume",
   description: "Professional resume and portfolio of Remco Stoeten, showcasing expertise in full-stack development, software architecture, and modern web technologies.",
@@ -24,12 +23,12 @@ export const metadata: Metadata = {
     title: "Remco Stoeten - Senior Software Engineer Resume",
     description: "Professional resume and portfolio of Remco Stoeten, showcasing expertise in full-stack development, software architecture, and modern web technologies.",
     type: "website",
-    url: baseUrl,
+    url: cfg.BASE_URL,
     siteName: "Remco Stoeten Resume",
     locale: "en_US",
     images: [
       {
-        url: `${baseUrl}/og-image.jpg`,
+        url: `${cfg.BASE_URL}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "Remco Stoeten - Resume",
@@ -42,8 +41,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Remco Stoeten - Senior Software Engineer Resume",
     description: "Professional resume and portfolio of Remco Stoeten",
-    images: [`${baseUrl}/og-image.jpg`],
-    creator: "@remcostoeten",
+    images: [`${cfg.BASE_URL}/og-image.jpg`],
+    creator: cfg.TWITTER_HANDLE,
   },
 
   keywords: [
@@ -64,7 +63,7 @@ export const metadata: Metadata = {
   creator: "Remco Stoeten",
   
   alternates: {
-    canonical: baseUrl,
+    canonical: cfg.BASE_URL,
   },
 
   robots: {
@@ -83,7 +82,7 @@ export const metadata: Metadata = {
     google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
   },
 
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL(cfg.BASE_URL),
   applicationName: "Remco Stoeten Resume",
   appleWebApp: {
     capable: true,
@@ -104,14 +103,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://cdn.vercel.com" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning
       >
         {children}
         <Toaster />
