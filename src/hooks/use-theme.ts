@@ -4,34 +4,30 @@ type TTheme = 'light' | 'dark';
 
 export function useTheme() {
   const [theme, setTheme] = useState<TTheme>('dark');
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const savedTheme = localStorage.getItem('theme') as TTheme | null;
     if (savedTheme) {
       setTheme(savedTheme);
     }
+    
+    const htmlElement = document.documentElement;
+    htmlElement.classList.toggle('dark', savedTheme === 'dark' || !savedTheme);
   }, []);
 
   useEffect(() => {
-    if (!mounted) return;
-    applyTheme(theme);
-    localStorage.setItem('theme', theme);
-  }, [theme, mounted]);
-
-  function applyTheme(selectedTheme: TTheme) {
     const htmlElement = document.documentElement;
-    if (selectedTheme === 'dark') {
+    if (theme === 'dark') {
       htmlElement.classList.add('dark');
     } else {
       htmlElement.classList.remove('dark');
     }
-  }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   function cycleTheme() {
     setTheme(prev => prev === 'light' ? 'dark' : 'light');
   }
 
-  return { theme, mounted, cycleTheme };
+  return { theme, cycleTheme };
 }
