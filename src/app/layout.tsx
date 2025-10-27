@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Remco Stoeten - Senior Software Engineer Resume",
   description: "Professional resume and portfolio of Remco Stoeten, showcasing expertise in full-stack development, software architecture, and modern web technologies.",
-  
+
   openGraph: {
     title: "Remco Stoeten - Senior Software Engineer Resume",
     description: "Professional resume and portfolio of Remco Stoeten, showcasing expertise in full-stack development, software architecture, and modern web technologies.",
@@ -58,10 +58,10 @@ export const metadata: Metadata = {
     "web development",
     "software architecture",
   ],
-  
+
   authors: [{ name: "Remco Stoeten" }],
   creator: "Remco Stoeten",
-  
+
   alternates: {
     canonical: cfg.BASE_URL,
   },

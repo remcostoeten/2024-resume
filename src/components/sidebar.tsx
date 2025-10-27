@@ -1,7 +1,8 @@
 import { memo } from 'react';
 import { Tooltip } from '@/components/ui/tooltip';
+import { Globe, Github, Linkedin, Mail } from 'lucide-react';
 
-interface SidebarProps {
+type TProps = {
   theme: 'light' | 'dark';
   showCopied: boolean;
   onShareLink: () => void;
@@ -23,7 +24,7 @@ export const Sidebar = memo(function Sidebar({
   onOpenLinkedIn,
   onOpenWebsite,
   onCycleTheme,
-}: SidebarProps) {
+}: TProps) {
   return (
     <div className="hidden lg:flex lg:w-16 lg:flex-col lg:border-r lg:border-border lg:bg-muted/30 lg:fixed lg:h-full print:hidden">
       <div className="flex flex-col items-center justify-center h-16 border-b border-border">
@@ -31,19 +32,36 @@ export const Sidebar = memo(function Sidebar({
       </div>
 
       <nav className="flex-1 flex flex-col items-center justify-center space-y-6">
-        <Tooltip content="Copy resume link">
+        <Tooltip content="Copy resume link" side="right">
           <button
             onClick={onShareLink}
-            className={`p-3 rounded-lg transition-all ${showCopied ? 'bg-green-600 text-white' : 'hover:bg-secondary text-foreground'}`}
+            className="relative p-3 rounded-lg hover:bg-secondary transition-colors"
             aria-label="Copy resume link"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+              className={`transition-all duration-300 ${showCopied ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}`}
+            >
               <path d="M237.66,106.35l-80-80A8,8,0,0,0,144,32V72.35c-25.94,2.22-54.59,14.92-78.16,34.91-28.38,24.08-46.05,55.11-49.76,87.37a12,12,0,0,0,20.68,9.58c11-11.71,50.14-48.74,107.24-52V192a8,8,0,0,0,13.66,5.65l80-80A8,8,0,0,0,237.66,106.35ZM160,172.69V144a8,8,0,0,0-8-8c-28.08,0-55.43,7.33-81.29,21.8a196.17,196.17,0,0,0-36.57,26.52c5.8-23.84,20.42-46.51,42.05-64.86C99.41,99.77,127.75,88,152,88a8,8,0,0,0,8-8V51.32L220.69,112Z" />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ${showCopied ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}`}
+            >
+              <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-64-64a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z" />
             </svg>
           </button>
         </Tooltip>
 
-        <Tooltip content="Download resume as PDF">
+        <Tooltip content="Download resume as PDF" side="right">
           <button
             onClick={onDownloadPDF}
             className="p-3 rounded-lg hover:bg-secondary transition-colors"
@@ -55,57 +73,49 @@ export const Sidebar = memo(function Sidebar({
           </button>
         </Tooltip>
 
-        <Tooltip content="Send email">
+        <Tooltip content="Send email" side="right">
           <button
             onClick={onOpenEmail}
             className="p-3 rounded-lg hover:bg-secondary transition-colors"
             aria-label="Email"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
-              <path d="M224,48H32a8,8,0,0,0-8,8V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM32,200V57.34L126.15,136.69a8,8,0,0,0,3.7,1,8.22,8.22,0,0,0,3.7-1L228,57.32V200Z" />
-            </svg>
+            <Mail size={20} />
           </button>
         </Tooltip>
 
-        <Tooltip content="GitHub">
+        <Tooltip content="GitHub" side="right">
           <button
             onClick={onOpenGitHub}
             className="p-3 rounded-lg hover:bg-secondary transition-colors"
             aria-label="GitHub"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
-              <path d="M128,24a104,104,0,1,0,104,104A104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32A8,8,0,0,1,176,128Z" />
-            </svg>
+            <Github size={20} />
           </button>
         </Tooltip>
 
-        <Tooltip content="LinkedIn">
+        <Tooltip content="LinkedIn" side="right">
           <button
             onClick={onOpenLinkedIn}
             className="p-3 rounded-lg hover:bg-secondary transition-colors"
             aria-label="LinkedIn"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
-              <path d="M128,24a104,104,0,1,0,104,104A104.11,104.11,0,0,0,128,24ZM96,176a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm48,0a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm48,0a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Z" />
-            </svg>
+            <Linkedin size={20} />
           </button>
         </Tooltip>
 
-        <Tooltip content="Website">
+        <Tooltip content="Website" side="right">
           <button
             onClick={onOpenWebsite}
             className="p-3 rounded-lg hover:bg-secondary transition-colors"
             aria-label="Website"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
-              <path d="M128,24a104,104,0,1,0,104,104A104.11,104.11,0,0,0,128,24Zm87.65,56H171.29a48,48,0,0,0-86.58,0H40.35a88.11,88.11,0,1,1,0,32h44.36a48,48,0,0,0,86.58,0h44.36a88.11,88.11,0,1,1,0-32Z" />
-            </svg>
+            <Globe size={20} />
           </button>
         </Tooltip>
       </nav>
 
       <div className="flex flex-col items-center justify-center h-16 border-t border-border">
-        <Tooltip content={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}>
+        <Tooltip content={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`} side="right">
           <button
             onClick={onCycleTheme}
             className="p-3 rounded-lg hover:bg-secondary transition-colors"

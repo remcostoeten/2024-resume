@@ -1,10 +1,10 @@
 import { memo } from 'react';
 
-interface PDFViewerProps {
+type TProps = {
   pdfUrl: string;
 }
 
-export const PDFViewer = memo(function PDFViewer({ pdfUrl }: PDFViewerProps) {
+export const PDFViewer = memo(function PDFViewer({ pdfUrl }: TProps) {
   return (
     <div className="flex-1 overflow-auto print:overflow-visible">
       <div className="flex justify-center py-6 lg:py-0 print:py-0">
