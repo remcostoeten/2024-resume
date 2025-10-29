@@ -7,7 +7,7 @@ type TProps = {
 export const PDFViewer = memo(function PDFViewer({ pdfUrl }: TProps) {
   return (
     <div className="flex-1 overflow-auto print:overflow-visible">
-      <div className="flex justify-center py-6 lg:py-0 print:py-0">
+      <div className="grid place-items-center h-screen print:py-0">
         <div className="relative print:m-0 rounded-lg shadow-lg print:shadow-none print:rounded-none" style={{ width: '210mm' }}>
           <iframe
             title="Remco Stoeten - Resume"
